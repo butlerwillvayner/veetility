@@ -4,35 +4,10 @@ import pandas as pd
 import os
 from datetime import datetime
 from veetility import snowflake as sf
-import random
 import time
 import io
 
-def exponential_backoff(attempt, max_attempts=10, base_delay=2, max_delay=60):
-    """
-    Calculates the delay for exponential backoff with randomization.
-    
-    Args:
-        attempt (int): The current attempt number.
-        max_attempts (int, optional): The maximum number of attempts before giving up. Defaults to 10.
-        base_delay (int, optional): The base delay in seconds. Defaults to 2.
-        max_delay (int, optional): The maximum delay in seconds. Defaults to 60.
-    
-    Returns:
-        int: The delay in seconds, or None if the maximum number of attempts has been reached.
-    """
-    if attempt > max_attempts:
-        return None
-    
-    delay = base_delay * (2 ** (attempt - 1))
-    delay = min(delay, max_delay)
-    
-    # Add some randomization to the delay to avoid thundering herd problem
-    delay = delay + random.uniform(0, 1) * delay
-    
-    return delay
-
-def connect_to_snowflake(connection_parameters):
+def connect_to_snowflake(connection_parameters: dict):
     """
     Connect to Snowflake
     :param connection_parameters: Dictionary of connection parameters
@@ -41,13 +16,14 @@ def connect_to_snowflake(connection_parameters):
     snowflake_session = sf.Snowflake(connection_params_dict=connection_parameters)
     return snowflake_session
 
-def send_to_snowflake(connection_parameters, df, channel):
+def send_to_snowflake(connection_parameters: dict, 
+                      df: pd.DataFrame, 
+                      channel: str):
     """
     Send dataframe to Snowflake
     :param connection_parameters: Dictionary of connection parameters
     :param df: Pandas DataFrame
-    :param table_name: Snowflake table name
-    :param schema: Snowflake schema name
+    :param channel: Twitter, Instagram, Facebook, Youtube, TikTok
     """
     table_names = { 'facebook' : "STG_RIVALIQ_FACEBOOK",
                     'twitter' : "STG_RIVALIQ_TWITTER",
@@ -83,12 +59,17 @@ def socialPosts_json_to_df(json_str):
     df = pd.json_normalize(data, 'socialPosts')
     return df
 
-def get_socialPosts(landscapeId, apiKey,
-                    companyId,
+def get_socialPosts(landscapeId: str, 
+                    apiKey: str,
+                    companyId: str,
                     mainPeriodStart='2023-01-01', 
                     mainPeriodEnd=datetime.today().strftime('%Y-%m-%d'),
-                    limit=500, channel='all', format='json', 
-                    print_df=False, verbose=False, save_csv=False):
+                    limit=500, 
+                    channel='all', 
+                    format='json', 
+                    print_df=False, 
+                    verbose=False, 
+                    save_csv=False):
     """
     Returns the top 500 posts for for all companies within the landscape within a given time period
     Note: Rival IQ may add or reorder columns in the CSV outputs; callers should not depend on column order but rather on column name.
@@ -187,7 +168,8 @@ def get_bulkSocialPosts(landscapeId: str,
         print(response.text) 
         raise Exception(f"Error: {response.status_code}")
     
-def get_bulkDownload_status(downloadToken, apiKey):
+def get_bulkDownload_status(downloadToken: str, 
+                            apiKey: str):
     """
     Checks bulk download status
     :param downloadToken: Bulk download token
@@ -207,46 +189,43 @@ def get_bulkDownload_status(downloadToken, apiKey):
         raise Exception(f"Error: {response.status_code}")
     
   
-
-def check_bulkDownload_status(downloadToken, apiKey, start_time, max_attempts=10):
+def check_bulkDownload_status(downloadToken: str, 
+                              apiKey: str, 
+                              start_time: str):
     """
     Recursively checks bulk download status and returns the download link as soon as the status is ready (status == 2)
-    Uses exponential backoff strategy to handle potential rate limiting or service unavailability.
-    
     :param downloadToken: Bulk download token
     :param apiKey: Rival IQ API key
-    :param start_time: Start time of the bulk download
-    :param max_attempts: Maximum number of attempts before giving up
+    :start_time: Start time of the bulk download
     :return: Download link
     """
-    attempt = 1
-    while attempt <= max_attempts:
-        response = get_bulkDownload_status(downloadToken, apiKey)
-        if response.status_code == 200:
-            data = response.json()
-            status = data['status']
-            if status == 2:
-                print(f"Download link is ready! Elapsed time: {round(time.time() - start_time, 2)} seconds")
-                return data['href']
-            elif status == 3:
-                print(f"Error: {response['status_code']}")
-                print(response['text'])
-                raise Exception(f"Download Failed! Elapsed time: {round(time.time() - start_time, 2)} seconds")
-            else:
-                delay = exponential_backoff(attempt, max_attempts=max_attempts)
-                if delay is None:
-                    print(f"Max attempts reached. Giving up after {round(time.time() - start_time, 2)} seconds.")
-                    raise Exception("Download Failed!")
-                
-                print(f"Download is still in progress. Checking again in {delay} seconds... Elapsed time: {round(time.time() - start_time, 2)} seconds")
-                time.sleep(delay)
-                attempt += 1
-        else:
+    response = get_bulkDownload_status(downloadToken, apiKey)
+    if response.status_code == 200:
+        data = response.json()
+        status = data['status']
+        if status == 2:
+            print(f"Download link is ready! Elapsed time: {round(time.time() - start_time, 2)} seconds")
+            return data['href']
+        elif status == 3:
             print(f"Error: {response['status_code']}")
             print(response['text'])
-            raise Exception(f"Error: {response['status_code']}")        
+            raise Exception(f"Download Failed! Elapsed time: {round(time.time() - start_time, 2)} seconds")
+        else:
+            print(f"Download is still in progress. Checking again in 60 seconds... Elapsed time: {round(time.time() - start_time, 2)} seconds")
+            time.sleep(60) # wait for 20 seconds before checking again
+            return check_bulkDownload_status(downloadToken, apiKey, start_time)
+    else:
+        print(f"Error: {response['status_code']}")
+        print(response['text']) 
+        raise Exception(f"Error: {response['status_code']}")        
 
-def download_bulkSocialPosts_csv(link, landscapeId, companyId, mainPeriodStart, mainPeriodEnd, channel, save_csv):
+def download_bulkSocialPosts_csv(link: str, 
+                                 landscapeId: str, 
+                                 companyId: str, 
+                                 mainPeriodStart: str, 
+                                 mainPeriodEnd: str, 
+                                 channel: str, 
+                                 save_csv = False):
     """
     Downloads a CSV file from a URL or returns a pandas dataframe
     :param link: URL of the CSV file
@@ -293,7 +272,8 @@ def download_bulkSocialPosts_csv(link, landscapeId, companyId, mainPeriodStart, 
     else:
         print("Unable to download the file. HTTP status code: ", r.status_code)
         
-def get_available_landscapes(apiKey, verbose=False):
+def get_available_landscapes(apiKey: str, 
+                             verbose = False):
     """
     Get a list of available landscapes
     :param apiKey: Rival IQ API key
@@ -325,7 +305,9 @@ def find_landscape_ids(json_string):
     landscape_ids = [landscape['id'] for landscape in data['landscapes']]
     return landscape_ids
 
-def get_landscapeCompanies(landscapeId, apiKey, verbose=False):
+def get_landscapeCompanies(landscapeId: str, 
+                           apiKey: str, 
+                           verbose=False):
     """
     Get landscape companies 
     :param landscapeId: Rival IQ landscape ID
@@ -370,11 +352,15 @@ def summaryMetrics_json_to_df(json_str):
     df = pd.json_normalize(data, 'metrics')
     return df
 
-def get_summaryMetrics(landscapeId, apiKey,
+def get_summaryMetrics(landscapeId: str, 
+                       apiKey: str,
                        mainPeriodStart='2023-01-01', 
                        mainPeriodEnd=datetime.today().strftime('%Y-%m-%d'),
-                       channel='all', format='json', 
-                       print_df = True, verbose=False, save_csv=False): 
+                       channel='all', 
+                       format='json', 
+                       print_df = True, 
+                       verbose=False, 
+                       save_csv=False): 
     """
     Returns summary values for all metrics
     :param landscapeId: Rival IQ landscape ID
@@ -419,7 +405,10 @@ def get_summaryMetrics(landscapeId, apiKey,
         raise Exception(f"Error: {response.status_code}")
       
 
-def post_followCompanies(apiKey, landscapeId, companyIds, verbose=False):
+def post_followCompanies(apiKey: str, 
+                         landscapeId: str, 
+                         companyIds: str, 
+                         verbose = False):
     """
     Follow companies in a given landscape. Uses their Rival IQ company IDs.
     At most 10 companies can be followed at a time.
@@ -449,6 +438,49 @@ def post_followCompanies(apiKey, landscapeId, companyIds, verbose=False):
         print("Companies followed successfully!")
         if verbose:
             print_pretty_json(response.json())
+    else:
+        print(f"Error: {response.status_code}")
+        print(response.text) 
+        raise Exception(f"Error: {response.status_code}")
+    
+def delete_unfollowCompany(apiKey: str,
+                           landscapeId: str, 
+                           companyId: str):
+    """
+    Unfollow company in the given landscape by its companyId
+    :param apiKey: Rival IQ API key
+    :param landscapeId: Rival IQ landscape ID
+    :param companyId: company ID
+    :param verbose: Print the JSON response
+    """
+    # Append apiKey as a query parameter in the URL
+    url = f"https://api.rivaliq.com/v3/landscapes/{landscapeId}/companies/{companyId}?apiKey={apiKey}"
+    
+    response = requests.delete(url=url)
+    
+    if response.status_code == 204:
+        print(f"Company with ID:{companyId} - unfollowed from landscapeId:{landscapeId}")
+    else:
+        print(f"Error: {response.status_code}")
+        print(response.text) 
+        raise Exception(f"Error: {response.status_code}")
+
+def delete_unfollowAllCompanies(
+    apiKey: str,
+    landscapeId: str):
+    """
+    Unfollow ALL companies in the given landscape
+    :param apiKey: Rival IQ API key
+    :param landscapeId: Rival IQ landscape ID
+    :param verbose: Print the JSON response
+    """
+    # Append apiKey as a query parameter in the URL
+    url = f"https://api.rivaliq.com/v3/landscapes/{landscapeId}/companies?apiKey={apiKey}"
+    
+    response = requests.delete(url=url)
+    
+    if response.status_code == 204:
+        print(f"All companies in landscape {landscapeId} - unfollowed")
     else:
         print(f"Error: {response.status_code}")
         print(response.text) 
