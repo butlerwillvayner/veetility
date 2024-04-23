@@ -7,6 +7,7 @@ import sys
 from unidecode import unidecode
 from collections import Counter
 from . import utility_functions
+from typing import Optional, Dict, List
 pickle_path = "Pickled Files/"
 # cleaning_logger = utility_functions.Logger('Indeed','CleaningFunctions')
 DEFAULT_COLS_NO_CHANGE = [
@@ -28,12 +29,12 @@ emoji_pattern = re.compile("["
                            "]+", flags=re.UNICODE)
 
 def clean_column_names(
-        df, 
-        name_of_df,
-        hardcode_col_dict=None,
-        errors='ignore',
-        cols_no_change=DEFAULT_COLS_NO_CHANGE
-):
+        df: pd.DataFrame, 
+        name_of_df: str,
+        hardcode_col_dict: Optional[Dict[str, str]] = None,
+        on_error: str ='ignore',
+        cols_no_change: List[str] = DEFAULT_COLS_NO_CHANGE
+) -> pd.DataFrame:
 
     """Cleans the column names of an advertisement performance (organic or paid) dataset, commonly from
     Tracer but could also be from Sprout social. The column names will be standardized so
@@ -142,7 +143,7 @@ def clean_column_names(
         else:
             message = f'Column "{column}" in {name_of_df} not cleaned'
             new_columns[column] = column
-            if errors == 'raise':
+            if on_error == 'raise':
                 raise Exception(message)
             print(message)
             # cleaning_logger.logger.info(message)
@@ -158,7 +159,9 @@ def clean_column_names(
 
     return df
 
-def extract_country_from_string(string, client_name, hardcode_dict):
+def extract_country_from_string(string: str,
+                                client_name: str,
+                                hardcode_dict: Optional[dict] = None) -> str:
     """Converts a string containing info identifying a certain 
     Args:
         string : str 
@@ -199,7 +202,7 @@ def extract_country_from_string(string, client_name, hardcode_dict):
         country_code = "N/A"
     return country_code
 
-def strip_object_columns(df):
+def strip_object_columns(df: pd.DataFrame):
     """Strips leading and trailing whitespaces in columns containing strings. 
         This stops effective duplications when two categories in a column 
         are essentially the same but one just has a whitespace"""
@@ -207,7 +210,7 @@ def strip_object_columns(df):
     df[df_obj.columns] = df_obj.apply(lambda x: x.str.strip())
     return df
 
-def extract_region_from_country(country):
+def extract_region_from_country(country: str):
     """Extracts the region from the given country.
 
     Args:
@@ -234,7 +237,7 @@ def extract_region_from_country(country):
         return None
 
 
-def clean_platform_name(platform):
+def clean_platform_name(platform: str) -> str:
     """Cleans the platform name into a the standard used company wide.
 
     Most platforms are in the 'title' case, i.e. First letter of each word is capitalised
@@ -249,7 +252,7 @@ def clean_platform_name(platform):
     else:
         return platform.title()
 
-def clean_url(url):
+def clean_url(url: str) -> str:
     """Clean the url of the post to produce a string with just the important information for matching.
 
     In the case of Tiktok remove everything after and including the ?, This removes the utm parameters"""
@@ -262,7 +265,7 @@ def clean_url(url):
         return url.split('?')[0]
     return url
 
-def updated_value_extract(url):
+def updated_value_extract(url: str) -> str:
     """Extract the unique identifier for a post from the url
     This format of this code depends on the platform, sometimes
     it is a numerical code, sometimes it is alphanumeric"""
@@ -284,7 +287,7 @@ def updated_value_extract(url):
     except:
         return 'N/A'
 
-def clean_media_type(media_type):
+def clean_media_type(media_type: str) -> str:
     """Clean the media type into a standardised version of media type"""
     media_type = str(media_type)
     # replace multiple underscores with a single space
@@ -312,7 +315,7 @@ def clean_media_type(media_type):
     return media_type_standardised
 
 
-def clean_placement(placement):
+def clean_placement(placement: str) -> str:
     """Clean a placement string into a standardised placement
     Args:
         placement (str): A string representing the placement of the post 
@@ -330,12 +333,15 @@ def clean_placement(placement):
         placement = 'Feed'
     return placement
 
-def extract_quarter_from_date(date):
+def extract_quarter_from_date(date: str) -> str:
     """Extracts the quarter from the date"""
     date = pd.to_datetime(date)
     return date.quarter
 
-def extract_after_nth_occurrence(string, char, n):
+def extract_after_nth_occurrence(string: str, 
+                                 char: str, 
+                                 n: int
+) -> str:
     """Extracts the string between the nth and n+1th occurrence of the character"""
     extract = string.split(char)[n]
     extract = extract.strip()

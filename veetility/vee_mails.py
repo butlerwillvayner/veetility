@@ -222,7 +222,7 @@ class VEEmail:
 
         return False
     
-    def csv_from_url_to_df(self, url):
+    def csv_from_url_to_df(self, url, skiprows=None):
         """Fetches a CSV file from a specified URL and loads it into a Pandas DataFrame.
 
         Args:
@@ -241,7 +241,7 @@ class VEEmail:
             # Ensure the request was successful
             if response.status_code == 200:
                 data = StringIO(response.content.decode('utf-8'))
-                df = pd.read_csv(data)
+                df = pd.read_csv(data, skiprows=None)
             else:
                 raise ValueError(f"Failed to download: Status code {response.status_code}")
             
