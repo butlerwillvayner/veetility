@@ -3,6 +3,7 @@ setup.py
 tests/test_best_fuzzy_match_dict.py
 tests/test_identify_match_multi_cols.py
 tests/test_prepare_string_matching.py
+tests/test_write_json.py
 veetility/__init__.py
 veetility/cleaning_functions.py
 veetility/email_functions.py

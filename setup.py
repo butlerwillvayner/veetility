@@ -15,7 +15,7 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 # This call to setup() does all the work
 setup(
     name="veetility",
-    version="0.3.31",
+    version="0.3.32",
     description="Demo library",
     long_description=long_description,
     long_description_content_type="text/markdown",
