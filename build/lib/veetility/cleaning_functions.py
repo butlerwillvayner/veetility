@@ -33,7 +33,8 @@ def clean_column_names(
         name_of_df: str,
         hardcode_col_dict: Optional[Dict[str, str]] = None,
         on_error: str ='ignore',
-        cols_no_change: List[str] = DEFAULT_COLS_NO_CHANGE
+        cols_no_change: List[str] = DEFAULT_COLS_NO_CHANGE,
+        print_matches: bool = False
 ) -> pd.DataFrame:
 
     """Cleans the column names of an advertisement performance (organic or paid) dataset, commonly from
@@ -156,6 +157,9 @@ def clean_column_names(
         # cleaning_logger.logger.exception(error)
         raise ValueError(error)
     df.columns = list(new_columns.values())
+
+    if print_matches:
+        print(f"{name_of_df} column matches = {new_columns}")
 
     return df
 

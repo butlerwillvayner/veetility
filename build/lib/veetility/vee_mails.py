@@ -294,7 +294,7 @@ class VEEmail:
 
 
     
-    def attachments_to_df(self, email_id, attachment_dir='', key_columns=None):
+    def attachments_to_df(self, email_id, attachment_dir='', key_columns=None, skiprows=None):
         """Retrieves an attachment from an email, converts it to a DataFrame, and returns it.
 
         This method gets an email message by its ID, then iterates through each part of the message.
@@ -353,7 +353,7 @@ class VEEmail:
                 print("Attachment is in content type 'text/csv'")
                 attachment = part.get_payload(decode=True)
                 csv_data = attachment.decode('utf-8').splitlines()
-                df = pd.read_csv(io.StringIO('\n'.join(csv_data)), sep=',')
+                df = pd.read_csv(io.StringIO('\n'.join(csv_data)), skiprows=skiprows, sep=',')
     
                 return df
             
@@ -387,9 +387,11 @@ class VEEmail:
 
         # Iterate over each line in the CSV content.
         for i, line in enumerate(lines):
+            print(f'line = {line}')
             # Check if all the key columns are present in the current line.
             # This is done by checking if each key column is a substring of the line.
             if all(key_column in line for key_column in key_columns):
+                print(f'row index found')
                 # If all key columns are found, set the current line index as the header row index.
                 header_row_index = i
                 # Break the loop as we have found the header row.
