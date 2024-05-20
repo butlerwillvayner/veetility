@@ -206,31 +206,49 @@ class Snowflake():
             return f"Table {table_name} has been dropped."
     
     def send_sql_query(self, sql_query, database=None, schema=None):
-            ''''''
+        """Executes a SQL query on a Snowflake database using the specified schema and database.
+
+        This function creates a connection to a Snowflake database using provided credentials,
+        executes a given SQL query, and commits the changes. It defaults to the instance's database
+        and schema if none are provided.
+
+        Args:
+            sql_query (str): The SQL query to execute. This could be any valid SQL command.
+            database (str, optional): The database to connect to. Defaults to the instance's database if None.
+            schema (str, optional): The schema to use within the database. Defaults to the instance's schema if None.
+
+        Raises:
+            snowflake.connector.Error: If there is an issue with the connection or the SQL execution.
+        """
+        
+        # Set default values for database and schema if not provided
+        if schema == None:
+            schema = self.schema
+        if database == None:
+            database = self.database
+        
+        # Create connection to Snowflake
+        with snowflake.connector.connect(
+            user=self.user,
+            password=self.password,
+            account=self.account,
+            warehouse=self.warehouse,
+            database=self.database,
+            schema=schema,
+        ) as conn:
             
-            # Set default values for database and schema if not provided
-            if schema == None:
-                schema = self.schema
-            if database == None:
-                database = self.database
-            
-            # Create connection to Snowflake
-            with snowflake.connector.connect(
-                user=self.user,
-                password=self.password,
-                account=self.account,
-                warehouse=self.warehouse,
-                database=self.database,
-                schema=schema,
-            ) as conn:
-            
-                # Create cursor
-                with conn.cursor() as cur:
-                    
-                    # Drop table
-                    cur.execute(sql_query)
-                    
-                    # Commit changes
+            # Create cursor and execute SQL query
+            with conn.cursor() as cur:
+                cur.execute(sql_query)
+
+                # Check if the SQL query was a SELECT statement and fetch results
+                if sql_query.strip().upper().startswith('SELECT'):
+                    result = cur.fetch_pandas_all()
+                else:
+                    # If not a SELECT query, commit changes and return None
                     conn.commit()
+                    return None
+
+        return result
 
 
