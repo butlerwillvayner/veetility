@@ -237,7 +237,7 @@ class VEEmail:
             # Ensure the request was successful
             if response.status_code == 200:
                 data = StringIO(response.content.decode('utf-8'))
-                df = pd.read_csv(data, skiprows=None, quoting=quoting)
+                df = pd.read_csv(data, skiprows=skiprows, quoting=quoting)
             else:
                 raise ValueError(f"Failed to download: Status code {response.status_code}")
             
