@@ -9,6 +9,7 @@ import requests
 import regex as re
 from io import StringIO
 from datetime import datetime
+from typing import Optional, Dict, List, Union
 today = datetime.today().date()
 
 #%%
@@ -33,26 +34,13 @@ class VEEmail:
         - attachments_to_df(): Retrieves an attachment from an email, converts it to a DataFrame, and returns it.
         - parse_csv(): Parses the provided CSV content into a pandas DataFrame, identifying the header row based on key columns.
     
-    Example:
-        # Create an instance of the VEEmail class
-        email_handler = VEEmail('example@gmail.com', 'p@ssw0rd')
-
-        # Search the emails in the inbox for specific substrings in the subject line of the email
-        email_ids = email_handler.search_emails(substrings_in_subject=['Report Available','Client Name X'])
-        
-        # Extract the main text of the first ([0]) and most recent email 
-        email_body = email_handler.get_email_body(email_ids[0])
-
-        # Extract the download URL from the text of the email
-        url = email_handler.extract_url_from_body(email_body)
-
-        # Download the csv file from the download URL
-        df = email_handler.csv_from_url_to_df(url)
-    
     Note:
         This class requires the imaplib library. Ensure you have this library installed and accessible in your Python environment."""
     
-    def __init__(self, username, password, debug_level=2):
+    def __init__(self, 
+                 username: str, 
+                 password: str, 
+                 debug_level: int=2):
         """Initializes the email client with a connection to an IMAP server, specifically targeting Gmail.
 
         This method establishes a secure IMAP connection to the Gmail server using the provided username and password. It sets the debug level for IMAP operations and selects the "[Gmail]/All Mail" folder to ensure all emails across different inboxes are accessible.
@@ -144,7 +132,8 @@ class VEEmail:
     
     
 
-    def get_msg_object(self, email_id):
+    def get_msg_object(self, 
+                       email_id: bytes):
         """Return the message object given the email ID, from which you can get details on what the email contains
         
         Returns a dictionary object containing information such as 'Delivered-To','Received',
@@ -171,10 +160,11 @@ class VEEmail:
         return msg
 
     
-    def get_email_body(self, email_id):
+    def get_email_body(self, 
+                       email_id: bytes):
         ''' Return the email body (i.e. the text) given the email ID
         Args:
-            email_id: Email ID
+            email_id: Email ID in byte format
 
         Returns:
             email_body: string of the main text message of the email
@@ -191,7 +181,8 @@ class VEEmail:
         else:
             return email_msg.get_payload(decode=True).decode()
     
-    def does_message_have_attachment(self, msg):
+    def does_message_have_attachment(self, 
+                                     msg: str):
         """Check if the message object contains an attachment that is either a CSV or Excel file.
 
         This method iterates through each part of the given email message object. 
@@ -222,11 +213,16 @@ class VEEmail:
 
         return False
     
-    def csv_from_url_to_df(self, url, skiprows=None):
+    def csv_from_url_to_df(self, 
+                           url: str,
+                           skiprows: Optional[int]=None, 
+                           quoting: int=0):
         """Fetches a CSV file from a specified URL and loads it into a Pandas DataFrame.
 
         Args:
             url (str): The URL of the CSV file to download.
+            skiprows(int): The number of rows to skip, incase there is header information on the file
+            quoting()
 
         Returns:
             DataFrame: A Pandas DataFrame containing the data from the CSV file.
@@ -241,7 +237,7 @@ class VEEmail:
             # Ensure the request was successful
             if response.status_code == 200:
                 data = StringIO(response.content.decode('utf-8'))
-                df = pd.read_csv(data, skiprows=None)
+                df = pd.read_csv(data, skiprows=None, quoting=quoting)
             else:
                 raise ValueError(f"Failed to download: Status code {response.status_code}")
             
@@ -254,7 +250,9 @@ class VEEmail:
             print(f"Pandas failed to parse the CSV data: {e}")
             raise
     
-    def extract_url_from_body(self, body, base_url=None):
+    def extract_url_from_body(self, 
+                              body: str,
+                              base_url: Optional[str]=None):
         """Extracts a single URL from the given text body.
 
         This function searches the provided text for URLs. If a base_url is provided, it specifically looks for URLs that start with this base. It is designed to return a single URL; if no URL or more than one URL is found, it raises a ValueError.
@@ -294,7 +292,12 @@ class VEEmail:
 
 
     
-    def attachments_to_df(self, email_id, attachment_dir='', key_columns=None, skiprows=None):
+    def attachments_to_df(self, 
+                          email_id: bytes, 
+                          attachment_dir: str='', 
+                          key_columns: Optional[List[str]]=None,
+                          skiprows: Optional[Union[int, List[int]]]=None
+    ):
         """Retrieves an attachment from an email, converts it to a DataFrame, and returns it.
 
         This method gets an email message by its ID, then iterates through each part of the message.
@@ -306,7 +309,7 @@ class VEEmail:
         'Venue Type', 'Advertiser'].
 
         Args:
-            email_id (str): The ID of the email to retrieve the attachment from.
+            email_id (str): The ID of the email to retrieve the attachment from, encoded in bytes
             attachment_dir (str, optional): The directory where attachments will be temporarily saved. 
                                         Defaults to an empty string, which indicates the current directory.
             key_columns (list of str, optional): A list of column names to be used as key columns for parsing the CSV. 
@@ -358,7 +361,9 @@ class VEEmail:
                 return df
             
 
-    def parse_csv(self, csv_content, key_columns):
+    def parse_csv(self, 
+                  csv_content: str,
+                  key_columns: Optional[List[str]]):
         """Parses the provided CSV content into a pandas DataFrame, identifying the header row based on key columns.
 
         This function processes a string representation of CSV data. It identifies the header row by searching for specified key columns. If the key columns are not provided, it defaults to a predefined set of columns.

@@ -114,7 +114,7 @@ class UtilityFunctions():
             string = re.sub(r'(https?://\S+)\s', '', string) # Remove URLs up to the first whitespace
 
         string = emoji_pattern.sub(r'', string) # remove emojis
-        
+    
         if ascii_characters == 'replace':
             string = unidecode(string)  # replace non-ASCII characters with their closest ASCII equivalents
         if ascii_characters == 'remove':
@@ -132,7 +132,7 @@ class UtilityFunctions():
             df_1_fuzzy_col=None, df_2_fuzzy_col=None, 
             is_exact_col_link=True, matched_col_name='boosted', 
             merge=False, cols_to_merge=None, 
-            pickle_name='NoStore'):
+            pickle_name='NoStore', fuzz_thresh=80):
         """Match row items in df_2 onto row items in df_1 based on two sets of columns,using exact and fuzzy matching.
 
         First try to match the row items in df_1 using the first set of columns, if there is no match then try to match
@@ -155,6 +155,7 @@ class UtilityFunctions():
             merge (bool): Boolean Flag, if true then df_2 will be left joined onto df_1. Else df_1 will be left unchanged apart from column indicating whether there is a match.
             cols_to_merge (list, str): List of strings to merge on if 'merge' = True.
             pickle_name (str): Name of the dictionary of best matches found by fuzzy matching to be stored as a pickle file. The next time the function is run with the same pickle_name, the pickle file is used to find matches without having to do slow fuzzy matching from scratch.
+            fuzz_thresh (int): Fuzzy matching threshold value between 0 and 100
             
         Returns:
             df_1 (DataFrame): The original df_1 with just a column to indicate whether a match has occured if merge = False else df_1 will have df_2 left joined on.
@@ -214,7 +215,7 @@ class UtilityFunctions():
 
         # the fuzzy match function will return a dictionary of matches for each caption from df_1 with the value
         # being the fuzzy col of df_2 with the best match above a certain percentage threshold similarity
-        best_match_dict = self.best_fuzzy_match(df_1_no_match_unique, df_2_fuzzy_unique, 80, pickle_name)
+        best_match_dict = self.best_fuzzy_match(df_1_no_match_unique, df_2_fuzzy_unique, fuzz_thresh, pickle_name)
 
         # create a column that is the closest match in df_2 for every caption in df_1
         # This will be used to merge df_2 onto the remainder of none matching df_1

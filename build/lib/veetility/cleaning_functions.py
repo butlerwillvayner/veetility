@@ -43,6 +43,7 @@ def clean_column_names(
 
     Args:
         df (DataFrame): Input dataframe containing a row item for each piece of creative or a day of advertising.
+        name_of_df (str): The name of the dataframe, used in logging messages
         hardcode_col_dict (Dict[str, str], optional): A dictionary specifying exact transformations of column names
                                                         from the key to the value.
         errors (str, optional): How to handle errors during the conversion.
