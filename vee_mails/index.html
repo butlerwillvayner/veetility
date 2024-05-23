@@ -294,41 +294,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#veetility.vee_mails.VEEmail--create-an-instance-of-the-veemail-class" class="md-nav__link">
-    Create an instance of the VEEmail class
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#veetility.vee_mails.VEEmail--search-the-emails-in-the-inbox-for-specific-substrings-in-the-subject-line-of-the-email" class="md-nav__link">
-    Search the emails in the inbox for specific substrings in the subject line of the email
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#veetility.vee_mails.VEEmail--extract-the-main-text-of-the-first-0-and-most-recent-email" class="md-nav__link">
-    Extract the main text of the first ([0]) and most recent email
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#veetility.vee_mails.VEEmail--extract-the-download-url-from-the-text-of-the-email" class="md-nav__link">
-    Extract the download URL from the text of the email
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#veetility.vee_mails.VEEmail--download-the-csv-file-from-the-download-url" class="md-nav__link">
-    Download the csv file from the download URL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#veetility.vee_mails.VEEmail.__init__" class="md-nav__link">
     __init__()
   </a>
@@ -489,41 +454,6 @@
   
     <nav class="md-nav" aria-label="VEEmail">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#veetility.vee_mails.VEEmail--create-an-instance-of-the-veemail-class" class="md-nav__link">
-    Create an instance of the VEEmail class
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#veetility.vee_mails.VEEmail--search-the-emails-in-the-inbox-for-specific-substrings-in-the-subject-line-of-the-email" class="md-nav__link">
-    Search the emails in the inbox for specific substrings in the subject line of the email
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#veetility.vee_mails.VEEmail--extract-the-main-text-of-the-first-0-and-most-recent-email" class="md-nav__link">
-    Extract the main text of the first ([0]) and most recent email
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#veetility.vee_mails.VEEmail--extract-the-download-url-from-the-text-of-the-email" class="md-nav__link">
-    Extract the download URL from the text of the email
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#veetility.vee_mails.VEEmail--download-the-csv-file-from-the-download-url" class="md-nav__link">
-    Download the csv file from the download URL
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#veetility.vee_mails.VEEmail.__init__" class="md-nav__link">
@@ -699,19 +629,6 @@
 <li>attachments_to_df(): Retrieves an attachment from an email, converts it to a DataFrame, and returns it.</li>
 <li>parse_csv(): Parses the provided CSV content into a pandas DataFrame, identifying the header row based on key columns.</li>
 </ul>
-</details>
-<details class="example">
-  <summary>Example</summary>
-  <h3 id="veetility.vee_mails.VEEmail--create-an-instance-of-the-veemail-class">Create an instance of the VEEmail class</h3>
-<p>email_handler = VEEmail('example@gmail.com', 'p@ssw0rd')</p>
-<h3 id="veetility.vee_mails.VEEmail--search-the-emails-in-the-inbox-for-specific-substrings-in-the-subject-line-of-the-email">Search the emails in the inbox for specific substrings in the subject line of the email</h3>
-<p>email_ids = email_handler.search_emails(substrings_in_subject=['Report Available','Client Name X'])</p>
-<h3 id="veetility.vee_mails.VEEmail--extract-the-main-text-of-the-first-0-and-most-recent-email">Extract the main text of the first ([0]) and most recent email</h3>
-<p>email_body = email_handler.get_email_body(email_ids[0])</p>
-<h3 id="veetility.vee_mails.VEEmail--extract-the-download-url-from-the-text-of-the-email">Extract the download URL from the text of the email</h3>
-<p>url = email_handler.extract_url_from_body(email_body)</p>
-<h3 id="veetility.vee_mails.VEEmail--download-the-csv-file-from-the-download-url">Download the csv file from the download URL</h3>
-<p>df = email_handler.csv_from_url_to_df(url)</p>
 </details>
 <details class="note">
   <summary>Note</summary>
@@ -1101,23 +1018,7 @@
 <span class="normal">393</span>
 <span class="normal">394</span>
 <span class="normal">395</span>
-<span class="normal">396</span>
-<span class="normal">397</span>
-<span class="normal">398</span>
-<span class="normal">399</span>
-<span class="normal">400</span>
-<span class="normal">401</span>
-<span class="normal">402</span>
-<span class="normal">403</span>
-<span class="normal">404</span>
-<span class="normal">405</span>
-<span class="normal">406</span>
-<span class="normal">407</span>
-<span class="normal">408</span>
-<span class="normal">409</span>
-<span class="normal">410</span>
-<span class="normal">411</span>
-<span class="normal">412</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">VEEmail</span><span class="p">:</span>
+<span class="normal">396</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">VEEmail</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A class for handling email operations for receiving and sending data using the imaplib library</span>
 
 <span class="sd">    The class provides a set of methods to interact with an google email server</span>
@@ -1137,22 +1038,6 @@
 <span class="sd">        - extract_url_from_body(): Extracts a single URL from the given text body.</span>
 <span class="sd">        - attachments_to_df(): Retrieves an attachment from an email, converts it to a DataFrame, and returns it.</span>
 <span class="sd">        - parse_csv(): Parses the provided CSV content into a pandas DataFrame, identifying the header row based on key columns.</span>
-
-<span class="sd">    Example:</span>
-<span class="sd">        # Create an instance of the VEEmail class</span>
-<span class="sd">        email_handler = VEEmail(&#39;example@gmail.com&#39;, &#39;p@ssw0rd&#39;)</span>
-
-<span class="sd">        # Search the emails in the inbox for specific substrings in the subject line of the email</span>
-<span class="sd">        email_ids = email_handler.search_emails(substrings_in_subject=[&#39;Report Available&#39;,&#39;Client Name X&#39;])</span>
-
-<span class="sd">        # Extract the main text of the first ([0]) and most recent email </span>
-<span class="sd">        email_body = email_handler.get_email_body(email_ids[0])</span>
-
-<span class="sd">        # Extract the download URL from the text of the email</span>
-<span class="sd">        url = email_handler.extract_url_from_body(email_body)</span>
-
-<span class="sd">        # Download the csv file from the download URL</span>
-<span class="sd">        df = email_handler.csv_from_url_to_df(url)</span>
 
 <span class="sd">    Note:</span>
 <span class="sd">        This class requires the imaplib library. Ensure you have this library installed and accessible in your Python environment.&quot;&quot;&quot;</span>
@@ -1327,7 +1212,7 @@
 
         <span class="k">return</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="nf">csv_from_url_to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">csv_from_url_to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Fetches a CSV file from a specified URL and loads it into a Pandas DataFrame.</span>
 
 <span class="sd">        Args:</span>
@@ -1346,7 +1231,7 @@
             <span class="c1"># Ensure the request was successful</span>
             <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
                 <span class="n">data</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
-                <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+                <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="n">quoting</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to download: Status code </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
@@ -1618,29 +1503,29 @@
 
       <details class="quote">
         <summary>Source code in <code>veetility/vee_mails.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">55</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
 <span class="normal">56</span>
 <span class="normal">57</span>
 <span class="normal">58</span>
 <span class="normal">59</span>
 <span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">debug_level</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">debug_level</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Initializes the email client with a connection to an IMAP server, specifically targeting Gmail.</span>
 
 <span class="sd">    This method establishes a secure IMAP connection to the Gmail server using the provided username and password. It sets the debug level for IMAP operations and selects the &quot;[Gmail]/All Mail&quot; folder to ensure all emails across different inboxes are accessible.</span>
@@ -1755,7 +1640,23 @@ is parsed based on key columns if provided, otherwise it uses default key column
 
       <details class="quote">
         <summary>Source code in <code>veetility/vee_mails.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">297</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
 <span class="normal">298</span>
 <span class="normal">299</span>
 <span class="normal">300</span>
@@ -1800,23 +1701,7 @@ is parsed based on key columns if provided, otherwise it uses default key column
 <span class="normal">339</span>
 <span class="normal">340</span>
 <span class="normal">341</span>
-<span class="normal">342</span>
-<span class="normal">343</span>
-<span class="normal">344</span>
-<span class="normal">345</span>
-<span class="normal">346</span>
-<span class="normal">347</span>
-<span class="normal">348</span>
-<span class="normal">349</span>
-<span class="normal">350</span>
-<span class="normal">351</span>
-<span class="normal">352</span>
-<span class="normal">353</span>
-<span class="normal">354</span>
-<span class="normal">355</span>
-<span class="normal">356</span>
-<span class="normal">357</span>
-<span class="normal">358</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">attachments_to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email_id</span><span class="p">,</span> <span class="n">attachment_dir</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">key_columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="normal">342</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">attachments_to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email_id</span><span class="p">,</span> <span class="n">attachment_dir</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">key_columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Retrieves an attachment from an email, converts it to a DataFrame, and returns it.</span>
 
 <span class="sd">    This method gets an email message by its ID, then iterates through each part of the message.</span>
@@ -1889,7 +1774,7 @@ is parsed based on key columns if provided, otherwise it uses default key column
 
 
 <h3 id="veetility.vee_mails.VEEmail.csv_from_url_to_df" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">csv_from_url_to_df</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">csv_from_url_to_df</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
 
 </h3>
 
@@ -1965,7 +1850,23 @@ is parsed based on key columns if provided, otherwise it uses default key column
 
       <details class="quote">
         <summary>Source code in <code>veetility/vee_mails.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">225</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
 <span class="normal">226</span>
 <span class="normal">227</span>
 <span class="normal">228</span>
@@ -1979,23 +1880,7 @@ is parsed based on key columns if provided, otherwise it uses default key column
 <span class="normal">236</span>
 <span class="normal">237</span>
 <span class="normal">238</span>
-<span class="normal">239</span>
-<span class="normal">240</span>
-<span class="normal">241</span>
-<span class="normal">242</span>
-<span class="normal">243</span>
-<span class="normal">244</span>
-<span class="normal">245</span>
-<span class="normal">246</span>
-<span class="normal">247</span>
-<span class="normal">248</span>
-<span class="normal">249</span>
-<span class="normal">250</span>
-<span class="normal">251</span>
-<span class="normal">252</span>
-<span class="normal">253</span>
-<span class="normal">254</span>
-<span class="normal">255</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">csv_from_url_to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="normal">239</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">csv_from_url_to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Fetches a CSV file from a specified URL and loads it into a Pandas DataFrame.</span>
 
 <span class="sd">    Args:</span>
@@ -2014,7 +1899,7 @@ is parsed based on key columns if provided, otherwise it uses default key column
         <span class="c1"># Ensure the request was successful</span>
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
             <span class="n">data</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
-            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="n">quoting</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to download: Status code </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
@@ -2095,7 +1980,23 @@ otherwise False.</p></td>
 
       <details class="quote">
         <summary>Source code in <code>veetility/vee_mails.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">194</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
 <span class="normal">195</span>
 <span class="normal">196</span>
 <span class="normal">197</span>
@@ -2108,23 +2009,7 @@ otherwise False.</p></td>
 <span class="normal">204</span>
 <span class="normal">205</span>
 <span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span>
-<span class="normal">209</span>
-<span class="normal">210</span>
-<span class="normal">211</span>
-<span class="normal">212</span>
-<span class="normal">213</span>
-<span class="normal">214</span>
-<span class="normal">215</span>
-<span class="normal">216</span>
-<span class="normal">217</span>
-<span class="normal">218</span>
-<span class="normal">219</span>
-<span class="normal">220</span>
-<span class="normal">221</span>
-<span class="normal">222</span>
-<span class="normal">223</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">does_message_have_attachment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+<span class="normal">207</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">does_message_have_attachment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if the message object contains an attachment that is either a CSV or Excel file.</span>
 
 <span class="sd">    This method iterates through each part of the given email message object. </span>
@@ -2255,7 +2140,23 @@ otherwise False.</p></td>
 
       <details class="quote">
         <summary>Source code in <code>veetility/vee_mails.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">257</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
 <span class="normal">258</span>
 <span class="normal">259</span>
 <span class="normal">260</span>
@@ -2275,23 +2176,7 @@ otherwise False.</p></td>
 <span class="normal">274</span>
 <span class="normal">275</span>
 <span class="normal">276</span>
-<span class="normal">277</span>
-<span class="normal">278</span>
-<span class="normal">279</span>
-<span class="normal">280</span>
-<span class="normal">281</span>
-<span class="normal">282</span>
-<span class="normal">283</span>
-<span class="normal">284</span>
-<span class="normal">285</span>
-<span class="normal">286</span>
-<span class="normal">287</span>
-<span class="normal">288</span>
-<span class="normal">289</span>
-<span class="normal">290</span>
-<span class="normal">291</span>
-<span class="normal">292</span>
-<span class="normal">293</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">extract_url_from_body</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="normal">277</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">extract_url_from_body</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Extracts a single URL from the given text body.</span>
 
 <span class="sd">    This function searches the provided text for URLs. If a base_url is provided, it specifically looks for URLs that start with this base. It is designed to return a single URL; if no URL or more than one URL is found, it raises a ValueError.</span>
@@ -2390,25 +2275,25 @@ otherwise False.</p></td>
 
       <details class="quote">
         <summary>Source code in <code>veetility/vee_mails.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">174</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
 <span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span>
-<span class="normal">179</span>
-<span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span>
-<span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
-<span class="normal">192</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_email_body</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email_id</span><span class="p">):</span>
+<span class="normal">176</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_email_body</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email_id</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Return the email body (i.e. the text) given the email ID</span>
 <span class="sd">    Args:</span>
 <span class="sd">        email_id: Email ID</span>
@@ -2493,7 +2378,23 @@ otherwise False.</p></td>
 
       <details class="quote">
         <summary>Source code in <code>veetility/vee_mails.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">147</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
 <span class="normal">148</span>
 <span class="normal">149</span>
 <span class="normal">150</span>
@@ -2501,23 +2402,7 @@ otherwise False.</p></td>
 <span class="normal">152</span>
 <span class="normal">153</span>
 <span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_msg_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email_id</span><span class="p">):</span>
+<span class="normal">155</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_msg_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email_id</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the message object given the email ID, from which you can get details on what the email contains</span>
 
 <span class="sd">    Returns a dictionary object containing information such as &#39;Delivered-To&#39;,&#39;Received&#39;,</span>
@@ -2638,7 +2523,23 @@ otherwise False.</p></td>
 </details>
       <details class="quote">
         <summary>Source code in <code>veetility/vee_mails.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">361</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
 <span class="normal">362</span>
 <span class="normal">363</span>
 <span class="normal">364</span>
@@ -2673,23 +2574,7 @@ otherwise False.</p></td>
 <span class="normal">393</span>
 <span class="normal">394</span>
 <span class="normal">395</span>
-<span class="normal">396</span>
-<span class="normal">397</span>
-<span class="normal">398</span>
-<span class="normal">399</span>
-<span class="normal">400</span>
-<span class="normal">401</span>
-<span class="normal">402</span>
-<span class="normal">403</span>
-<span class="normal">404</span>
-<span class="normal">405</span>
-<span class="normal">406</span>
-<span class="normal">407</span>
-<span class="normal">408</span>
-<span class="normal">409</span>
-<span class="normal">410</span>
-<span class="normal">411</span>
-<span class="normal">412</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">parse_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">csv_content</span><span class="p">,</span> <span class="n">key_columns</span><span class="p">):</span>
+<span class="normal">396</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">parse_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">csv_content</span><span class="p">,</span> <span class="n">key_columns</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Parses the provided CSV content into a pandas DataFrame, identifying the header row based on key columns.</span>
 
 <span class="sd">    This function processes a string representation of CSV data. It identifies the header row by searching for specified key columns. If the key columns are not provided, it defaults to a predefined set of columns.</span>
@@ -2836,7 +2721,23 @@ when you have a certain type of data coming in for multiple clients and need to 
 
       <details class="quote">
         <summary>Source code in <code>veetility/vee_mails.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 79</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
 <span class="normal"> 80</span>
 <span class="normal"> 81</span>
 <span class="normal"> 82</span>
@@ -2884,23 +2785,7 @@ when you have a certain type of data coming in for multiple clients and need to 
 <span class="normal">124</span>
 <span class="normal">125</span>
 <span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">search_emails</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> 
+<span class="normal">127</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">search_emails</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> 
         <span class="n">from_email</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
         <span class="n">substrings_in_subject</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
         <span class="n">exclude_subject_substring</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 

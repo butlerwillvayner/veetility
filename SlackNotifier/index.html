@@ -457,8 +457,7 @@
 
         <details class="quote">
           <summary>Source code in <code>veetility/utility_functions.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1021</span>
-<span class="normal">1022</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1022</span>
 <span class="normal">1023</span>
 <span class="normal">1024</span>
 <span class="normal">1025</span>
@@ -524,7 +523,8 @@
 <span class="normal">1085</span>
 <span class="normal">1086</span>
 <span class="normal">1087</span>
-<span class="normal">1088</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">SlackNotifier</span><span class="p">:</span>
+<span class="normal">1088</span>
+<span class="normal">1089</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">SlackNotifier</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A Slack notifier class to send rich-text messages using Slack&#39;s Block Kit.</span>
 
 <span class="sd">    Attributes:</span>
@@ -624,12 +624,12 @@ title (str, optional): Default title for the Slack messages. Defaults to "Data U
 
       <details class="quote">
         <summary>Source code in <code>veetility/utility_functions.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1028</span>
-<span class="normal">1029</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1029</span>
 <span class="normal">1030</span>
 <span class="normal">1031</span>
 <span class="normal">1032</span>
-<span class="normal">1033</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slack_webhook_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Data Update&quot;</span><span class="p">):</span>
+<span class="normal">1033</span>
+<span class="normal">1034</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slack_webhook_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Data Update&quot;</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Args:</span>
 <span class="sd">        slack_webhook_url (str): The webhook URL for the Slack channel.</span>
 <span class="sd">        title (str, optional): Default title for the Slack messages. Defaults to &quot;Data Update&quot;.&quot;&quot;&quot;</span>
@@ -719,8 +719,7 @@ title (str, optional): Default title for the Slack messages. Defaults to "Data U
 
       <details class="quote">
         <summary>Source code in <code>veetility/utility_functions.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1035</span>
-<span class="normal">1036</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1036</span>
 <span class="normal">1037</span>
 <span class="normal">1038</span>
 <span class="normal">1039</span>
@@ -772,7 +771,8 @@ title (str, optional): Default title for the Slack messages. Defaults to "Data U
 <span class="normal">1085</span>
 <span class="normal">1086</span>
 <span class="normal">1087</span>
-<span class="normal">1088</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">send_slack_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">links</span><span class="p">):</span>
+<span class="normal">1088</span>
+<span class="normal">1089</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">send_slack_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">links</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Sends a formatted message to Slack using the provided webhook URL.</span>
 
 <span class="sd">    Args:</span>
