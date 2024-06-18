@@ -20,9 +20,9 @@ import re
 from collections import Counter
 import json
 load_dotenv()
-google_sheet_auth_dict = json.loads(os.getenv('google_sheet_auth_dict'))
 
-util = utility_functions.UtilityFunctions('LinkedIn API', google_sheet_auth_dict, db_user=os.getenv('db_user'),
+
+util = utility_functions.UtilityFunctions('LinkedIn API', db_user=os.getenv('db_user'),
                                            db_password=os.getenv('db_password'), db_host=os.getenv('db_host'),
                                            db_port=os.getenv('db_port'), db_name=os.getenv('db_name'), log_name='Main')
 

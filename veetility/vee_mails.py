@@ -241,6 +241,7 @@ class VEEmail:
             else:
                 raise ValueError(f"Failed to download: Status code {response.status_code}")
             
+            print(f'Number of rows in the dataframe is {df.shape[0]}')
             return df
         
         except requests.RequestException as e:

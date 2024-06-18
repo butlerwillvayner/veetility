@@ -823,6 +823,9 @@ class UtilityFunctions():
             df[date_col] = df[date_col].str.strip()
             df[date_col] = pd.to_datetime(df[date_col], dayfirst=dayfirst, yearfirst=yearfirst,
                                             format=format, errors=errors)
+            
+            print(f'Sheet = {sheet_name}, Min date = {df[date_col].min()}, Max date = {df[date_col].max()}')
+        
         return df
 
     
