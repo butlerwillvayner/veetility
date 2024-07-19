@@ -72,7 +72,7 @@ class LinkedInAPI:
                 
             Attributes:
                 api_token (str): Stores the API token for use in other methods.
-                headers_v1 (dict): Stores headers for API X-Restli-Protocol-Version 1.
+                headers_v1 (dict): Stor=es headers for API X-Restli-Protocol-Version 1.
                 headers_v2 (dict): Stores headers for API VX-Restli-Protocol-Version 2.
                 time_zone (timezone): Stores the time zone information."""
         
@@ -116,7 +116,13 @@ class LinkedInAPI:
         print(f"Starting exponential delay of {round(delay + jitter,2)} seconds to give server time to recover")
         time.sleep(delay + jitter)
     
-    def run_request_with_error_handling(self, url, headers, params=None, max_retries=5, expected_json_response=True):
+    def run_request_with_error_handling(self, 
+                                        url, 
+                                        headers, 
+                                        params=None, 
+                                        max_retries=5, 
+                                        expected_json_response=True, 
+                                        ):
         """Wrapper function to execute an HTTP GET request with error handling and mutliple time delayed retries.
             
         Args:
@@ -135,10 +141,20 @@ class LinkedInAPI:
         try:
             if params == None:
                 response = requests.get(url=url, headers=headers)
+                #print(response.headers.get('X-LI-UUID'))
             else:
                 response = requests.get(url=url, headers=headers, params=params)
+                
             self.response = response
             response.raise_for_status()
+
+            rate_limit_info = {
+                'Limit': response.headers.get('RateLimit-Limit'),
+                'Remaining': response.headers.get('RateLimit-Remaining'),
+                'Reset': response.headers.get('RateLimit-Reset'),
+            }
+
+            # print(f"{rate_limit_info}")
 
             # Sometimes even though the status code is 200, the response object is actually a None value, that doesn't get picked up 
             # by testing for response == None, weird behaviour I couldn't figure out. So below i test to see if getting the json from response is possible
@@ -255,11 +271,11 @@ class LinkedInAPI:
             Populates the `org_ids` attribute of the class instance with a list of organization IDs, if any are found.
             Prints a message to the console if no data is found in the API response."""
         
-        url = "https://api.linkedin.com/rest/organizationalEntityAcls?q=roleAssignee&role=ADMINISTRATOR&fields=organizationalTarget&count=1000"
+        url = "https://api.linkedin.com/rest/organizationAcls?q=roleAssignee"
 
         response = self.run_request_with_error_handling(url, self.headers_v2)
 
-        org_ids = [list(element.values())[0].replace('urn:li:organization:','') for element in response.json().get("elements", [])]
+        org_ids = [x.get('organization').replace("urn:li:organization:", "") for x in response.json().get("elements")]
         if org_ids:
             self.org_ids = org_ids
         else:
@@ -277,13 +293,13 @@ class LinkedInAPI:
             2. Prints the API response to the console."""
         
         org_info_df = pd.DataFrame()
-        headers = self.headers_v1
+        headers = self.headers_v2
 
         if not hasattr(self, 'org_ids'):
             self.fetch_org_ids()
 
         for org_id in self.org_ids:
-            url = "https://api.linkedin.com/rest/organizations"
+            url = f"https://api.linkedin.com/rest/organizations{org_id}"
             params={'ids' : str(org_id)}
 
             response = self.run_request_with_error_handling(url, headers, params=params)
@@ -431,6 +447,7 @@ class LinkedInAPI:
             try:
                 stats = self.fetch_stats_for_a_post(org_and_post[1], org_and_post[0])
             except:
+                print(f"Fetching stats for post failed: {org_and_post[1]} org_id = {org_and_post[0]} ")
                 #if the process fails save an excel sheet of where we got to to save fetching everything again
                 pd.DataFrame(self.post_stats_dict).transpose().reset_index().to_excel("Failed_fetch_posts_stats.xlsx")
 
@@ -472,7 +489,7 @@ class LinkedInAPI:
             'type' : 'VIDEO_VIEW'
         }
         url = 'https://api.linkedin.com/rest/videoAnalytics'
-        response = self.run_request_with_error_handling(url, self.headers_v1, params)
+        response = self.run_request_with_error_handling(url, self.headers_v2, params)
         return response.json()
     
     def fetch_video_views_for_multiple_posts(self, posts_df, media_type_col, post_id_col='id',output_col='videoViews'):
