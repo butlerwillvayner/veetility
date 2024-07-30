@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: veetility
-Version: 0.3.44
+Version: 0.4.0
 Summary: Demo library
 Home-page: 
 Author: Vaynermedia
@@ -16,6 +16,16 @@ Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: 3.9
 Classifier: Operating System :: OS Independent
 Description-Content-Type: text/markdown
+Requires-Dist: fuzzywuzzy
+Requires-Dist: gspread
+Requires-Dist: gspread_dataframe
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: psycopg2-binary
+Requires-Dist: regex
+Requires-Dist: requests
+Requires-Dist: SQLAlchemy
+Requires-Dist: tqdm
 
 # Getting Started
 A library to help create python pipelines for processing Tracer Data
