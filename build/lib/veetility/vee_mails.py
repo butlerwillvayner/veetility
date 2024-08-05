@@ -1,8 +1,12 @@
-#%%
 import pandas as pd
 import email
 import imaplib
 import boto3
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
 import io
 import os
 import requests
@@ -12,7 +16,6 @@ from datetime import datetime
 from typing import Optional, Dict, List, Union
 today = datetime.today().date()
 
-#%%
 class VEEmail:
     """A class for handling email operations for receiving and sending data using the imaplib library
     
@@ -62,6 +65,8 @@ class VEEmail:
         # This line is crucial for making sure all email inboxes are searched
         con.select('"[Gmail]/All Mail"') 
         self.con = con
+        self.username = username
+        self.password = password
         self.search_string = ""
     
     def search_emails(self, 
@@ -69,31 +74,16 @@ class VEEmail:
             substrings_in_subject=None, 
             exclude_subject_substring=None, 
             send_date=None,
-            sent_today=False
+            sent_today=None
     ):
         """ Searches for emails based on the sender's email address, substrings within a subject, and/or whether they were sent today.
 
         This method constructs a search string based on the provided parameters and uses it to search through emails. 
         It returns a list of email IDs that meet the specified criteria.
-
-        Every substring in the substrings_in_subject list must be in the subject line of the email in order for the email to be found.
-        For example if the email subject line is "Client X Adobe Data", and substrings_in_subject = ['Client Y', 'Adobe'] then 
-        the search would not return that email because although "Adobe" is in the subject line, "Client Y" isn't. This can be useful 
-        when you have a certain type of data coming in for multiple clients and need to differentiate.
-        
-        The larger the email id the more recent the email is.
-
-        Args:
-            from_email (str): The exact email address of the sender of the email
-            substrings_in_subject (list): A list of substrings you want to search for the subject of an email
-            exclude_subject_substring (str): Exclude emails containing this substring in the subject line
-            sent_date (str): The date sent in the format %d-%b-%Y, e.g. 01-Jan-2013
-            sent_today (bool): Filter the mail by data that was sent today
-        
-        Returns: 
-            email_ids (list): List of email ids of emails that meet the search criteria, ordered most recent email first, the larger the number the more recent the email
         """
-
+        if send_date is not None and sent_today:
+            raise ValueError("Cannot use both 'send_date' and 'sent_today' parameters simultaneously.")
+        
         search_string = ''
 
         if from_email != None:
@@ -109,7 +99,7 @@ class VEEmail:
         if send_date != None:
             search_string += f'(SENTON "{send_date}")'
         
-        if sent_today != False:
+        if sent_today:
             search_string += f'(SENTON "{today.strftime("%d-%b-%Y")}")'
         
         # You have to have space in between the different bracketed search items 
@@ -118,7 +108,7 @@ class VEEmail:
 
         print(f'Search String = {search_string}')
         self.search_string = search_string
-    
+
         status, email_ids = self.con.search(None, self.search_string)
 
         if status != 'OK':
@@ -210,13 +200,13 @@ class VEEmail:
                 extension = os.path.splitext(file_name)[1].lower()
                 if extension in ['.csv', '.xls', '.xlsx', '.xlsm']:
                     return True
-
         return False
-    
+
+
     def csv_from_url_to_df(self, 
-                           url: str,
-                           skiprows: Optional[int]=None, 
-                           quoting: int=0):
+                        url: str,
+                        skiprows: Optional[int]=None, 
+                        quoting: int=0):
         """Fetches a CSV file from a specified URL and loads it into a Pandas DataFrame.
 
         Args:
@@ -250,10 +240,10 @@ class VEEmail:
         except pd.errors.ParserError as e:
             print(f"Pandas failed to parse the CSV data: {e}")
             raise
-    
+
     def extract_url_from_body(self, 
-                              body: str,
-                              base_url: Optional[str]=None):
+                            body: str,
+                            base_url: Optional[str]=None):
         """Extracts a single URL from the given text body.
 
         This function searches the provided text for URLs. If a base_url is provided, it specifically looks for URLs that start with this base. It is designed to return a single URL; if no URL or more than one URL is found, it raises a ValueError.
@@ -292,12 +282,12 @@ class VEEmail:
             raise ValueError("More than one URL found in the email content.")
 
 
-    
+
     def attachments_to_df(self, 
-                          email_id: bytes, 
-                          attachment_dir: str='', 
-                          key_columns: Optional[List[str]]=None,
-                          skiprows: Optional[Union[int, List[int]]]=None
+                        email_id: bytes, 
+                        attachment_dir: str='', 
+                        key_columns: Optional[List[str]]=None,
+                        skiprows: Optional[Union[int, List[int]]]=None
     ):
         """Retrieves an attachment from an email, converts it to a DataFrame, and returns it.
 
@@ -358,13 +348,13 @@ class VEEmail:
                 attachment = part.get_payload(decode=True)
                 csv_data = attachment.decode('utf-8').splitlines()
                 df = pd.read_csv(io.StringIO('\n'.join(csv_data)), skiprows=skiprows, sep=',')
-    
+
                 return df
             
 
     def parse_csv(self, 
-                  csv_content: str,
-                  key_columns: Optional[List[str]]):
+                csv_content: str,
+                key_columns: Optional[List[str]]):
         """Parses the provided CSV content into a pandas DataFrame, identifying the header row based on key columns.
 
         This function processes a string representation of CSV data. It identifies the header row by searching for specified key columns. If the key columns are not provided, it defaults to a predefined set of columns.
@@ -416,3 +406,45 @@ class VEEmail:
 
         # Return the parsed DataFrame.
         return parsed_df
+
+    def send_email(self, to_email: str, subject: str, body: str, attachment_path: Optional[str] = None):
+        """Sends an email with an optional attachment.
+
+        Args:
+            to_email (str): The recipient's email address.
+            subject (str): The subject of the email.
+            body (str): The body of the email.
+            attachment_path (str, optional): The file path of the
+            Raises: Exception: If there is an issue with sending the email.
+        """
+        from_email = self.username
+
+        # Create the MIME message object
+        msg = MIMEMultipart()
+        msg['From'] = from_email
+        msg['To'] = to_email
+        msg['Subject'] = subject
+
+        # Attach the body text
+        msg.attach(MIMEText(body, 'plain'))
+
+        # Attach the file if provided
+        if attachment_path:
+            attachment = MIMEBase('application', 'octet-stream')
+            with open(attachment_path, 'rb') as file:
+                attachment.set_payload(file.read())
+            encoders.encode_base64(attachment)
+            attachment.add_header('Content-Disposition', f'attachment; filename="{os.path.basename(attachment_path)}"')
+            msg.attach(attachment)
+
+        # Establish a secure session with the server and send the email
+        try:
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(from_email, self.password)
+            server.sendmail(from_email, to_email, msg.as_string())
+            server.quit()
+            print("Email sent successfully!")
+        except Exception as e:
+            print(f"Failed to send email: {e}")
+            raise

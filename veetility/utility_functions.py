@@ -1036,12 +1036,13 @@ class SlackNotifier:
         self.slack_webhook_url = slack_webhook_url
         self.title = title
 
-    def send_slack_message(self, message: str, title: str = None, **links):
+    def send_slack_message(self, message: str, title: str = None, channel: str = None, **links):
         """Sends a formatted message to Slack using the provided webhook URL.
         
         Args:
             message (str): The main content of the Slack message.
             title (str, optional): The title of the Slack message. If not provided, defaults to the instance's title.
+            channel (str, optional): The Slack channel ID to send the message to.
             **links (str): Key-value pairs of descriptive names and actual URLs to be included in the Slack message.
         
         Raises:
@@ -1086,7 +1087,11 @@ class SlackNotifier:
 
         payload = {"blocks": blocks}
 
+        if channel:
+            payload["channel"] = channel
+
         try:
-            requests.post(self.slack_webhook_url, data=json.dumps(payload))
+            response = requests.post(self.slack_webhook_url, data=json.dumps(payload))
+            response.raise_for_status()
         except Exception as e:
-            self.logger.logger.error(f"Failed To Send Slack message {e}", exc_info=True)
+            print(f"Failed To Send Slack message: {e}")
