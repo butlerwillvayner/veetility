@@ -276,10 +276,10 @@ class VEEmail:
             >>> extract_url_from_body("Multiple URLs: https://example.com, https://example.org")
             ValueError: More than one URL found in the email content."""
 
-        if base_url == None:
-            pattern = r'https?://[^\s]+'
+        if base_url is None:
+            pattern = r'https?://[^\s<>"\'()]+'
         else:
-            pattern = f'{base_url}[^\s]+'
+            pattern = re.escape(base_url) + r'[^\s<>"\'()]+'
 
         urls = re.findall(pattern, body)
 
