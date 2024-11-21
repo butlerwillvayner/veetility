@@ -206,7 +206,7 @@ class VEEmail:
     def csv_from_url_to_df(self, 
                         url: str,
                         skiprows: Optional[int]=None, 
-                        quoting: int=0):
+                        quoting: Optional[int]=0):
         """Fetches a CSV file from a specified URL and loads it into a Pandas DataFrame.
 
         Args:
@@ -215,7 +215,7 @@ class VEEmail:
             quoting()
 
         Returns:
-            DataFrame: A Pandas DataFrame containing the data from the CSV file.
+            DataFrame: A Pandaconda lists DataFrame containing the data from the CSV file.
 
         Raises:
             ValueError: If the request does not return a successful status code.
@@ -266,10 +266,10 @@ class VEEmail:
             >>> extract_url_from_body("Multiple URLs: https://example.com, https://example.org")
             ValueError: More than one URL found in the email content."""
 
-        if base_url == None:
-            pattern = r'https?://[^\s]+'
+        if base_url is None:
+            pattern = r'https?://[^\s<>"\'()]+'
         else:
-            pattern = f'{base_url}[^\s]+'
+            pattern = re.escape(base_url) + r'[^\s<>"\'()]+'
 
         urls = re.findall(pattern, body)
 

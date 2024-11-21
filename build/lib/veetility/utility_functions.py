@@ -14,7 +14,7 @@ import gspread
 import pickle
 import gspread_dataframe as gd
 import os
-import subprocess
+import subprocess 
 import sqlalchemy as sa
 from unidecode import unidecode
 from datetime import datetime, timedelta
@@ -1022,76 +1022,12 @@ class Logger:
 
         self.logger = logger    
 
-class SlackNotifier:
-    """A Slack notifier class to send rich-text messages using Slack's Block Kit.
-    
-    Attributes:
-        slack_webhook_url (str): The webhook URL for the Slack channel.
-        title (str): Default title for the Slack messages."""
 
-    def __init__(self, slack_webhook_url: str, title="Data Update"):
-        """Args:
-            slack_webhook_url (str): The webhook URL for the Slack channel.
-            title (str, optional): Default title for the Slack messages. Defaults to "Data Update"."""
-        self.slack_webhook_url = slack_webhook_url
-        self.title = title
-
-    def send_slack_message(self, message: str, title: str = None, channel: str = None, **links):
-        """Sends a formatted message to Slack using the provided webhook URL.
-        
-        Args:
-            message (str): The main content of the Slack message.
-            title (str, optional): The title of the Slack message. If not provided, defaults to the instance's title.
-            channel (str, optional): The Slack channel ID to send the message to.
-            **links (str): Key-value pairs of descriptive names and actual URLs to be included in the Slack message.
-        
-        Raises:
-            Exception: If the request to send the Slack message fails.
-            """
-        if title is None:
-            title = self.title
-
-        blocks = [
-            {
-                "type": "header",
-                "text": {
-                    "type": "plain_text",
-                    "text": title
-                }
-            },
-            {
-                "type": "divider"
-            },
-            {
-                "type": "section",
-                "fields": [
-                    {
-                        "type": "mrkdwn",
-                        "text": message
-                    },
-                ],
-            },
-            {
-                "type": "divider"
-            },
-        ]
-
-        for link_name, link in links.items():
-            blocks.append({
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": f"<{link}|{link_name}>"
-                }
-            })
-
-        payload = {"blocks": blocks}
-
-        if channel:
-            payload["channel"] = channel
-
-        try:
-            response = requests.post(self.slack_webhook_url, data=json.dumps(payload))
-            response.raise_for_status()
-        except Exception as e:
-            print(f"Failed To Send Slack message: {e}")
+def slack_error_notification(webhook, message):
+    '''
+    Create a slack webhook to send a
+    notification to a slack channel
+    '''
+    webhook = webhook
+    payload = {'text': message}
+    requests.post(webhook, data=json.dumps(payload))

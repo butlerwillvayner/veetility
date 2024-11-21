@@ -14,7 +14,7 @@ import gspread
 import pickle
 import gspread_dataframe as gd
 import os
-import subprocess
+import subprocess 
 import sqlalchemy as sa
 from unidecode import unidecode
 from datetime import datetime, timedelta
