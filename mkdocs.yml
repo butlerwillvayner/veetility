@@ -12,8 +12,8 @@ nav:
   - Cleaning : CleaningFunctions.md
   - Quality Assessment: QAFunctions.md
   - View Through Rate: ViewThroughRate.md
-  - Slack Notifier: SlackNotifier.md
   - Email Functions: vee_mails.md
   - Snowflake : snowflake.md
   - S3Bucket : S3Bucket.md
   - LinkedIn API : LinkedIn_API.md
+  - Amazon Ads : AmazonAds.md

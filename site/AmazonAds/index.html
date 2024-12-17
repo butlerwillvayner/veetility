@@ -1,0 +1,3761 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../LinkedIn_API/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Amazon Ads - Veetility Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#amazon-ads-methods" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Veetility Docs" class="md-header__button md-logo" aria-label="Veetility Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Veetility Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Amazon Ads
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Veetility Docs" class="md-nav__button md-logo" aria-label="Veetility Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Veetility Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UtilityFunctions/" class="md-nav__link">
+        Utility Functions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CleaningFunctions/" class="md-nav__link">
+        Cleaning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QAFunctions/" class="md-nav__link">
+        Quality Assessment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ViewThroughRate/" class="md-nav__link">
+        View Through Rate
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vee_mails/" class="md-nav__link">
+        Email Functions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snowflake/" class="md-nav__link">
+        Snowflake
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../S3Bucket/" class="md-nav__link">
+        S3Bucket
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinkedIn_API/" class="md-nav__link">
+        LinkedIn API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Amazon Ads
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Amazon Ads
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI" class="md-nav__link">
+    veetility.amazonads_api.AmazonAPI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.clean_sql_query" class="md-nav__link">
+    clean_sql_query()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.create_workflow" class="md-nav__link">
+    create_workflow()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.download_query_results" class="md-nav__link">
+    download_query_results()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.execute_and_download" class="md-nav__link">
+    execute_and_download()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.execute_saved_workflow" class="md-nav__link">
+    execute_saved_workflow()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.fetch_access_token" class="md-nav__link">
+    fetch_access_token()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.inspect_workflow" class="md-nav__link">
+    inspect_workflow()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.list_workflows" class="md-nav__link">
+    list_workflows()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.update_workflow" class="md-nav__link">
+    update_workflow()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.worflow_execution_status" class="md-nav__link">
+    worflow_execution_status()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI" class="md-nav__link">
+    veetility.amazonads_api.AmazonAPI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.clean_sql_query" class="md-nav__link">
+    clean_sql_query()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.create_workflow" class="md-nav__link">
+    create_workflow()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.download_query_results" class="md-nav__link">
+    download_query_results()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.execute_and_download" class="md-nav__link">
+    execute_and_download()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.execute_saved_workflow" class="md-nav__link">
+    execute_saved_workflow()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.fetch_access_token" class="md-nav__link">
+    fetch_access_token()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.inspect_workflow" class="md-nav__link">
+    inspect_workflow()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.list_workflows" class="md-nav__link">
+    list_workflows()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.update_workflow" class="md-nav__link">
+    update_workflow()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veetility.amazonads_api.AmazonAPI.worflow_execution_status" class="md-nav__link">
+    worflow_execution_status()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="amazon-ads-methods">Amazon Ads Methods</h1>
+
+
+<div class="doc doc-object doc-class">
+
+
+<a id="veetility.amazonads_api.AmazonAPI"></a>
+  <div class="doc doc-contents first">
+
+  
+      <p>A Python wrapper for interacting with the Amazon Advertising API and Amazon Marketing Cloud (AMC).</p>
+<p>This class provides methods for managing workflows, executing queries, and retrieving results 
+from Amazon Marketing Cloud. It simplifies API interaction by handling authentication, request 
+headers, and response parsing.</p>
+
+<details class="initialization-args">
+  <summary>Initialization Args</summary>
+  <p>refresh_token (Optional[str]): The OAuth2 refresh token used to generate access tokens.
+client_id (Optional[str]): The client ID for the Amazon developer application.
+client_secret (Optional[str]): The client secret for the Amazon developer application.
+marketplace_id (Optional[str]): The marketplace ID to associate with API requests, usually a country
+instance_id (Optional[str]): The AMC instance ID to target for workflows and queries.
+advertizer_id (Optional[str]): The advertiser ID to associate with API requests.</p>
+</details>
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>base_url</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The base URL for the Amazon Advertising API.</p></td>
+        </tr>
+        <tr>
+          <td><code>standard_header</code></td>
+          <td>
+                <code>dict</code>
+          </td>
+          <td><p>The standard headers used for all API requests, including 
+authorization and client details.</p></td>
+        </tr>
+        <tr>
+          <td><code>access_token</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The access token generated during initialization.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="key-methods">
+  <summary>Key Methods</summary>
+  <p>fetch_access_token: Retrieves a new access token using the provided refresh token.
+list_workflows: Fetches a list of workflows associated with the specified AMC instance.
+inspect_workflow: Retrieves details about a specific workflow.
+clean_sql_query: Formats SQL queries by removing comments and unnecessary whitespace.
+create_workflow: Creates a new workflow with a specified SQL query and workflow ID.
+update_workflow: Updates an existing workflow with a new SQL query.
+execute_saved_workflow: Executes a saved workflow with a specified time window.
+worflow_execution_status: Retrieves the current status of a workflow execution.
+download_query_results: Downloads the results of a completed workflow execution as a Pandas DataFrame.
+execute_and_download: Executes a workflow, monitors its status, and downloads the results if successful.</p>
+</details>
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>requests.<span title="requests.RequestException">RequestException</span></code>
+          </td>
+          <td><p>If any API request fails.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code>KeyError</code>
+          </td>
+          <td><p>If an expected response field is missing.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code>ValueError</code>
+          </td>
+          <td><p>If invalid parameters are provided.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="note">
+  <summary>Note</summary>
+  <p>Ensure that the correct credentials and IDs are provided during initialization to 
+avoid authentication or access issues.</p>
+</details>
+
+        <details class="quote">
+          <summary>Source code in <code>veetility/amazonads_api.py</code></summary>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span>
+<span class="normal">440</span>
+<span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span>
+<span class="normal">444</span>
+<span class="normal">445</span>
+<span class="normal">446</span>
+<span class="normal">447</span>
+<span class="normal">448</span>
+<span class="normal">449</span>
+<span class="normal">450</span>
+<span class="normal">451</span>
+<span class="normal">452</span>
+<span class="normal">453</span>
+<span class="normal">454</span>
+<span class="normal">455</span>
+<span class="normal">456</span>
+<span class="normal">457</span>
+<span class="normal">458</span>
+<span class="normal">459</span>
+<span class="normal">460</span>
+<span class="normal">461</span>
+<span class="normal">462</span>
+<span class="normal">463</span>
+<span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span>
+<span class="normal">467</span>
+<span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span>
+<span class="normal">475</span>
+<span class="normal">476</span>
+<span class="normal">477</span>
+<span class="normal">478</span>
+<span class="normal">479</span>
+<span class="normal">480</span>
+<span class="normal">481</span>
+<span class="normal">482</span>
+<span class="normal">483</span>
+<span class="normal">484</span>
+<span class="normal">485</span>
+<span class="normal">486</span>
+<span class="normal">487</span>
+<span class="normal">488</span>
+<span class="normal">489</span>
+<span class="normal">490</span>
+<span class="normal">491</span>
+<span class="normal">492</span>
+<span class="normal">493</span>
+<span class="normal">494</span>
+<span class="normal">495</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span>
+<span class="normal">499</span>
+<span class="normal">500</span>
+<span class="normal">501</span>
+<span class="normal">502</span>
+<span class="normal">503</span>
+<span class="normal">504</span>
+<span class="normal">505</span>
+<span class="normal">506</span>
+<span class="normal">507</span>
+<span class="normal">508</span>
+<span class="normal">509</span>
+<span class="normal">510</span>
+<span class="normal">511</span>
+<span class="normal">512</span>
+<span class="normal">513</span>
+<span class="normal">514</span>
+<span class="normal">515</span>
+<span class="normal">516</span>
+<span class="normal">517</span>
+<span class="normal">518</span>
+<span class="normal">519</span>
+<span class="normal">520</span>
+<span class="normal">521</span>
+<span class="normal">522</span>
+<span class="normal">523</span>
+<span class="normal">524</span>
+<span class="normal">525</span>
+<span class="normal">526</span>
+<span class="normal">527</span>
+<span class="normal">528</span>
+<span class="normal">529</span>
+<span class="normal">530</span>
+<span class="normal">531</span>
+<span class="normal">532</span>
+<span class="normal">533</span>
+<span class="normal">534</span>
+<span class="normal">535</span>
+<span class="normal">536</span>
+<span class="normal">537</span>
+<span class="normal">538</span>
+<span class="normal">539</span>
+<span class="normal">540</span>
+<span class="normal">541</span>
+<span class="normal">542</span>
+<span class="normal">543</span>
+<span class="normal">544</span>
+<span class="normal">545</span>
+<span class="normal">546</span>
+<span class="normal">547</span>
+<span class="normal">548</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">AmazonAPI</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A Python wrapper for interacting with the Amazon Advertising API and Amazon Marketing Cloud (AMC).</span>
+
+<span class="sd">    This class provides methods for managing workflows, executing queries, and retrieving results </span>
+<span class="sd">    from Amazon Marketing Cloud. It simplifies API interaction by handling authentication, request </span>
+<span class="sd">    headers, and response parsing.</span>
+
+<span class="sd">    Initialization Args:</span>
+<span class="sd">        refresh_token (Optional[str]): The OAuth2 refresh token used to generate access tokens.</span>
+<span class="sd">        client_id (Optional[str]): The client ID for the Amazon developer application.</span>
+<span class="sd">        client_secret (Optional[str]): The client secret for the Amazon developer application.</span>
+<span class="sd">        marketplace_id (Optional[str]): The marketplace ID to associate with API requests, usually a country</span>
+<span class="sd">        instance_id (Optional[str]): The AMC instance ID to target for workflows and queries.</span>
+<span class="sd">        advertizer_id (Optional[str]): The advertiser ID to associate with API requests.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        base_url (str): The base URL for the Amazon Advertising API.</span>
+<span class="sd">        standard_header (dict): The standard headers used for all API requests, including </span>
+<span class="sd">            authorization and client details.</span>
+<span class="sd">        access_token (str): The access token generated during initialization.</span>
+
+<span class="sd">    Key Methods:</span>
+<span class="sd">        fetch_access_token: Retrieves a new access token using the provided refresh token.</span>
+<span class="sd">        list_workflows: Fetches a list of workflows associated with the specified AMC instance.</span>
+<span class="sd">        inspect_workflow: Retrieves details about a specific workflow.</span>
+<span class="sd">        clean_sql_query: Formats SQL queries by removing comments and unnecessary whitespace.</span>
+<span class="sd">        create_workflow: Creates a new workflow with a specified SQL query and workflow ID.</span>
+<span class="sd">        update_workflow: Updates an existing workflow with a new SQL query.</span>
+<span class="sd">        execute_saved_workflow: Executes a saved workflow with a specified time window.</span>
+<span class="sd">        worflow_execution_status: Retrieves the current status of a workflow execution.</span>
+<span class="sd">        download_query_results: Downloads the results of a completed workflow execution as a Pandas DataFrame.</span>
+<span class="sd">        execute_and_download: Executes a workflow, monitors its status, and downloads the results if successful.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        requests.RequestException: If any API request fails.</span>
+<span class="sd">        KeyError: If an expected response field is missing.</span>
+<span class="sd">        ValueError: If invalid parameters are provided.</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">        Ensure that the correct credentials and IDs are provided during initialization to </span>
+<span class="sd">        avoid authentication or access issues.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">refresh_token</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">client_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">client_secret</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">marketplace_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">instance_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">advertizer_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+                 <span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_token</span> <span class="o">=</span> <span class="n">refresh_token</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client_id</span> <span class="o">=</span> <span class="n">client_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client_secret</span> <span class="o">=</span> <span class="n">client_secret</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">marketplace_id</span> <span class="o">=</span> <span class="n">marketplace_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span> <span class="o">=</span> <span class="n">instance_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">advertizer_id</span> <span class="o">=</span> <span class="n">advertizer_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;https://advertising-api.amazon.com&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fetch_access_token</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">access_token</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Amazon-Advertising-API-ClientID&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_id</span><span class="p">,</span>
+            <span class="s2">&quot;Amazon-Advertising-API-AdvertiserId&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">advertizer_id</span><span class="p">,</span>
+            <span class="s2">&quot;Amazon-Advertising-API-MarketplaceId&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">marketplace_id</span><span class="p">,</span>
+            <span class="s2">&quot;Content-type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span>
+        <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">fetch_access_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fetches a new access token using the refresh token provided during initialization.</span>
+
+<span class="sd">        This method sends a POST request to Amazon&#39;s OAuth2 token endpoint to exchange the </span>
+<span class="sd">        refresh token for an access token. The access token is then used to authenticate </span>
+<span class="sd">        subsequent API requests.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            requests.RequestException: If the request to the token endpoint fails.</span>
+<span class="sd">            KeyError: If the response does not contain an access token.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None: The method updates the instance&#39;s `access_token` attribute.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">token_url</span> <span class="o">=</span> <span class="s1">&#39;https://api.amazon.com/auth/o2/token&#39;</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;grant_type&quot;</span><span class="p">:</span> <span class="s2">&quot;refresh_token&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;refresh_token&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">refresh_token</span><span class="p">,</span>
+            <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_id</span><span class="p">,</span>
+            <span class="s2">&quot;client_secret&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_secret</span>
+        <span class="p">}</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">token_url</span><span class="p">,</span>
+                                 <span class="n">data</span><span class="o">=</span><span class="n">body</span>
+                                 <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)[</span><span class="s1">&#39;access_token&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">list_workflows</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieves a list of workflows for the specified AMC instance.</span>
+
+<span class="sd">        This method sends a GET request to the AMC API to fetch all workflows associated</span>
+<span class="sd">        with the instance ID. It handles pagination using the `nextToken` provided by </span>
+<span class="sd">        the API and filters workflows that contain SQL queries.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[Dict[str, str]]: A list of dictionaries containing `sqlQuery` and `workflowId` </span>
+<span class="sd">            for each workflow that includes a SQL query. Each SQL query is cleaned to remove </span>
+<span class="sd">            newlines.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            requests.RequestException: If the API request fails.</span>
+<span class="sd">            KeyError: If the response does not contain expected fields like `workflows` or `nextToken`.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; workflows = api.list_workflows()</span>
+<span class="sd">            &gt;&gt;&gt; print(workflows)</span>
+<span class="sd">            [{&#39;sqlQuery&#39;: &#39;SELECT * FROM ...&#39;, &#39;workflowId&#39;: &#39;workflow_123&#39;}, ...]&quot;&quot;&quot;</span>
+
+        <span class="n">next_token</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">workflows</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+
+            <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> \
+                <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflows&#39;</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">next_token</span><span class="p">:</span>
+                <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;nextToken&#39;</span><span class="p">:</span> <span class="n">next_token</span><span class="p">}</span>
+
+            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Status code = </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+            <span class="n">workflows</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;workflows&#39;</span><span class="p">])</span>
+
+            <span class="n">next_token</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;nextToken&#39;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">next_token</span><span class="p">:</span>
+                <span class="k">break</span>
+
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">workflows</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">workflows</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;sqlQuery&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">]</span>
+
+        <span class="n">workflows</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;sqlQuery&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;sqlQuery&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+            <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),</span> <span class="s1">&#39;workflowId&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;workflowId&#39;</span><span class="p">]}</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">workflows</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">workflows</span>
+
+    <span class="k">def</span> <span class="nf">inspect_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">workflow_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieves details of a specific workflow by its ID.</span>
+
+<span class="sd">        Sends a GET request to the AMC API to fetch metadata and details about a</span>
+<span class="sd">        particular workflow identified by `workflow_id`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            workflow_id (str): The unique identifier of the workflow to inspect.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None: The response from the API is printed to the console.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            requests.RequestException: If the API request fails.</span>
+<span class="sd">            KeyError: If the response does not contain expected fields.&quot;&quot;&quot;</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> \
+            <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflows/</span><span class="si">{</span><span class="n">workflow_id</span><span class="si">}</span><span class="s1">&#39;</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">clean_sql_query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sql_query</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Cleans a SQL query by removing comments, newlines, and unnecessary whitespace.</span>
+
+<span class="sd">        This method ensures that the SQL query is in a single-line format suitable for</span>
+<span class="sd">        API requests. It removes single-line comments (starting with `--`), multi-line</span>
+<span class="sd">        comments (enclosed in `/* */`), newlines, and tabs.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            sql_query (str): The raw SQL query string to be cleaned.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A cleaned SQL query formatted as a single line without comments or extra whitespace.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; query = &#39;&#39;&#39;</span>
+<span class="sd">            ... SELECT * FROM table -- This is a comment</span>
+<span class="sd">            ... WHERE column = 1 /* Multi-line</span>
+<span class="sd">            ... comment */</span>
+<span class="sd">            ... &#39;&#39;&#39;</span>
+<span class="sd">            &gt;&gt;&gt; clean_query = api.clean_sql_query(query)</span>
+<span class="sd">            &gt;&gt;&gt; print(clean_query)</span>
+<span class="sd">            SELECT * FROM table WHERE column = 1</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Use re.sub() to replace the single line comments with an empty string</span>
+        <span class="c1"># The flags=re.MULTILINE make the $ match end of lines in a multi-line string</span>
+        <span class="c1"># sql_query = re.sub(r&quot;--.*?$&quot;, &quot;&quot;, sql_query, flags=re.MULTILINE)</span>
+        <span class="n">sql_query</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;--[^\n]*&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">sql_query</span><span class="p">)</span>
+
+        <span class="c1"># Remove multi-line sql comments</span>
+        <span class="n">sql_query</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;/\*.*?\*/&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_query</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">sql_query</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+
+    <span class="k">def</span> <span class="nf">create_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                        <span class="n">sql_query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                        <span class="n">workflow_id</span><span class="p">:</span> <span class="nb">str</span>
+                        <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Creates a new workflow in AMC with the specified SQL query and workflow ID.</span>
+
+<span class="sd">        This method sends a POST request to the AMC API to create a workflow. The SQL</span>
+<span class="sd">        query is cleaned to ensure it is properly formatted for the API, and the workflow</span>
+<span class="sd">        is assigned a unique ID.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            sql_query (str): The SQL query defining the workflow.</span>
+<span class="sd">            workflow_id (str): The unique identifier for the new workflow.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None: The response from the API is printed to the console.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            requests.RequestException: If the API request fails.</span>
+<span class="sd">            KeyError: If the response does not contain expected fields.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; sql_query = &quot;SELECT * FROM table WHERE column = 1&quot;</span>
+<span class="sd">            &gt;&gt;&gt; api.create_workflow(sql_query, &quot;workflow_123&quot;)</span>
+<span class="sd">            Status code = 201</span>
+<span class="sd">            {&quot;workflowId&quot;: &quot;workflow_123&quot;, &quot;status&quot;: &quot;CREATED&quot;, ...}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">sql_query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clean_sql_query</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span>
+
+        <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="c1"># &quot;distinctUserCountColumn&quot;: &quot;du_count&quot;,</span>
+            <span class="s2">&quot;sqlQuery&quot;</span><span class="p">:</span> <span class="n">sql_query</span><span class="p">,</span>
+            <span class="s2">&quot;workflowId&quot;</span><span class="p">:</span> <span class="n">workflow_id</span>
+        <span class="p">}</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflows&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Status code = </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">update_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                        <span class="n">workflow_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                        <span class="n">sql_query</span><span class="p">:</span> <span class="nb">str</span>
+                        <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Updates an existing workflow in AMC with a new SQL query.</span>
+
+<span class="sd">        This method sends a PUT request to the AMC API to update the SQL query of an</span>
+<span class="sd">        existing workflow identified by `workflow_id`. The SQL query is cleaned to ensure</span>
+<span class="sd">        it is properly formatted for the API.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            workflow_id (str): The unique identifier of the workflow to update.</span>
+<span class="sd">            sql_query (str): The new SQL query to assign to the workflow.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None: The response from the API is printed to the console.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            requests.RequestException: If the API request fails.</span>
+<span class="sd">            KeyError: If the response does not contain expected fields.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; sql_query = &quot;SELECT * FROM table WHERE column = 2&quot;</span>
+<span class="sd">            &gt;&gt;&gt; api.update_workflow(&quot;workflow_123&quot;, sql_query)</span>
+<span class="sd">            Status code = 200</span>
+<span class="sd">            {&quot;workflowId&quot;: &quot;workflow_123&quot;, &quot;status&quot;: &quot;UPDATED&quot;, ...}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">sql_query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clean_sql_query</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span>
+
+        <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="c1"># &quot;distinctUserCountColumn&quot;: &quot;du_count&quot;,</span>
+            <span class="s2">&quot;sqlQuery&quot;</span><span class="p">:</span> <span class="n">sql_query</span><span class="p">,</span>
+            <span class="s2">&quot;workflowId&quot;</span><span class="p">:</span> <span class="n">workflow_id</span>
+        <span class="p">}</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflows/</span><span class="si">{</span><span class="n">workflow_id</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
+            <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Status code = </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">execute_saved_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                               <span class="n">workflow_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                               <span class="n">time_window_start</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                               <span class="n">time_window_end</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                               <span class="n">time_window_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                               <span class="n">time_window_time_zone</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+                               <span class="p">):</span>
+
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes a saved workflow with the specified time window and returns the execution ID.</span>
+
+<span class="sd">        Sends a POST request to the AMC API to execute the workflow identified by `workflow_id`. </span>
+<span class="sd">        The time window can be specified explicitly or by using predefined time window types.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            workflow_id (str): The unique identifier of the workflow to execute.</span>
+<span class="sd">            time_window_start (Optional[str]): The start of the time window (ISO 8601 format), </span>
+<span class="sd">                required if `time_window_type` is `EXPLICIT`.</span>
+<span class="sd">            time_window_end (Optional[str]): The end of the time window (ISO 8601 format), </span>
+<span class="sd">                required if `time_window_type` is `EXPLICIT`.</span>
+<span class="sd">            time_window_type (Optional[str]): The type of time window to use. If not provided, </span>
+<span class="sd">                defaults to `MOST_RECENT_DAY`. Valid options are:</span>
+<span class="sd">                    - `EXPLICIT`: The start and end of the time window must be explicitly </span>
+<span class="sd">                      provided in the request.</span>
+<span class="sd">                    - `MOST_RECENT_DAY`: The most recent 1-day window for which data is available, </span>
+<span class="sd">                      aligned to day boundaries.</span>
+<span class="sd">                    - `MOST_RECENT_WEEK`: The most recent 1-week window for which data is available, </span>
+<span class="sd">                      aligned to day boundaries.</span>
+<span class="sd">                    - `CURRENT_MONTH`: From the start of the current month to the most recent time </span>
+<span class="sd">                      for which data is available.</span>
+<span class="sd">                    - `PREVIOUS_MONTH`: The entire previous month.</span>
+<span class="sd">            time_window_time_zone (Optional[str]): The time zone for the time window, e.g. &#39;America/New_York&#39;. </span>
+<span class="sd">                If not provided, defaults to the instance&#39;s configured time zone. </span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The workflow execution ID.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            requests.RequestException: If the API request fails.</span>
+<span class="sd">            KeyError: If the response does not contain the expected fields.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; workflow_id = &quot;workflow_123&quot;</span>
+<span class="sd">            &gt;&gt;&gt; execution_id = api.execute_saved_workflow(</span>
+<span class="sd">            ...     workflow_id, </span>
+<span class="sd">            ...     time_window_type=&quot;MOST_RECENT_WEEK&quot;</span>
+<span class="sd">            ... )</span>
+<span class="sd">            &gt;&gt;&gt; print(execution_id)</span>
+<span class="sd">            workflowExecution_456&quot;&quot;&quot;</span>
+
+        <span class="n">body</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;workflowId&quot;</span><span class="p">:</span> <span class="n">workflow_id</span><span class="p">,</span>
+                <span class="s2">&quot;timeWindowStart&quot;</span><span class="p">:</span> <span class="n">time_window_start</span><span class="p">,</span>
+                <span class="s2">&quot;timeWindowEnd&quot;</span><span class="p">:</span> <span class="n">time_window_end</span><span class="p">,</span>
+                <span class="s2">&quot;timeWindowType&quot;</span><span class="p">:</span> <span class="n">time_window_type</span><span class="p">,</span>
+                <span class="s2">&quot;timeWindowTimeZone&quot;</span><span class="p">:</span> <span class="n">time_window_time_zone</span>
+        <span class="p">}</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> \
+            <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflowExecutions&#39;</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Status code = </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;workflowExecutionId&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">worflow_execution_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                                 <span class="n">workflow_execution_id</span><span class="p">:</span> <span class="nb">str</span>
+                                 <span class="p">):</span>
+
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieves the current status of a workflow execution.</span>
+
+<span class="sd">        Sends a GET request to the AMC API to fetch the status of a workflow execution</span>
+<span class="sd">        identified by `workflow_execution_id`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            workflow_execution_id (str): The unique identifier of the workflow execution.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The status of the workflow execution. </span>
+
+
+<span class="sd">        Raises:</span>
+<span class="sd">            requests.RequestException: If the API request fails.</span>
+<span class="sd">            KeyError: If the response does not contain the expected `status` field.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; execution_id = &quot;workflowExecution_456&quot;</span>
+<span class="sd">            &gt;&gt;&gt; status = api.worflow_execution_status(execution_id)</span>
+<span class="sd">            &gt;&gt;&gt; print(status)</span>
+<span class="sd">            &quot;RUNNING&quot;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> \
+            <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflowExecutions/</span><span class="si">{</span><span class="n">workflow_execution_id</span><span class="si">}</span><span class="s1">&#39;</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">download_query_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                               <span class="n">workflow_execution_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                               <span class="n">skiprows</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                               <span class="n">quoting</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+                               <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Downloads query results for a completed workflow execution and returns them as a Pandas DataFrame.</span>
+
+<span class="sd">        Sends a GET request to retrieve the download URL for the workflow execution results, </span>
+<span class="sd">        then fetches and parses the results into a DataFrame.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            workflow_execution_id (str): The unique identifier of the workflow execution.</span>
+<span class="sd">            skiprows (Optional[int]): The number of rows to skip at the beginning of the CSV file. </span>
+<span class="sd">                Defaults to None.</span>
+<span class="sd">            quoting (int): Controls how quotes in the CSV data are handled. Uses `csv` module constants:</span>
+<span class="sd">                - `csv.QUOTE_MINIMAL` (0): Quote fields containing special characters.</span>
+<span class="sd">                - `csv.QUOTE_ALL` (1): Quote all fields.</span>
+<span class="sd">                - `csv.QUOTE_NONNUMERIC` (2): Quote all non-numeric fields.</span>
+<span class="sd">                - `csv.QUOTE_NONE` (3): Do not quote fields. Defaults to 0.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            pd.DataFrame: A DataFrame containing the query results.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            requests.RequestException: If the API request fails or the download URL is unreachable.</span>
+<span class="sd">            ValueError: If the download fails with a non-200 status code.</span>
+<span class="sd">            pd.errors.ParserError: If Pandas encounters an issue parsing the CSV data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> \
+            <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflowExecutions/</span><span class="si">{</span><span class="n">workflow_execution_id</span><span class="si">}</span><span class="s1">/downloadUrls&#39;</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="n">download_url</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;downloadUrls&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">download_url</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+                <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">skiprows</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="n">quoting</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Failed to download: Status code </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of rows in the dataframe is </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">df</span>
+
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Request failed: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="n">pd</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">ParserError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pandas failed to parse the CSV data: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">raise</span>
+
+    <span class="k">def</span> <span class="nf">execute_and_download</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                             <span class="n">workflow_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                             <span class="n">time_window_start</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                             <span class="n">time_window_end</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                             <span class="n">time_window_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                             <span class="n">time_window_time_zone</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+                             <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes a saved workflow, monitors its status, and downloads the results if successful.</span>
+
+<span class="sd">        This method combines workflow execution, status monitoring, and result retrieval. </span>
+<span class="sd">        It retries the status check with an exponential backoff strategy until the workflow </span>
+<span class="sd">        either succeeds or fails, or the maximum number of attempts is reached.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            workflow_id (str): The unique identifier of the workflow to execute.</span>
+<span class="sd">            time_window_start (Optional[str]): The start of the time window (ISO 8601 format), </span>
+<span class="sd">                required if `time_window_type` is `EXPLICIT`.</span>
+<span class="sd">            time_window_end (Optional[str]): The end of the time window (ISO 8601 format), </span>
+<span class="sd">                required if `time_window_type` is `EXPLICIT`.</span>
+<span class="sd">            time_window_type (Optional[str]): The type of time window to use. If not provided, </span>
+<span class="sd">                defaults to `MOST_RECENT_DAY`. Valid options are:</span>
+<span class="sd">                    - `EXPLICIT`: The start and end of the time window must be explicitly provided.</span>
+<span class="sd">                    - `MOST_RECENT_DAY`: The most recent 1-day window for which data is available.</span>
+<span class="sd">                    - `MOST_RECENT_WEEK`: The most recent 1-week window for which data is available.</span>
+<span class="sd">                    - `CURRENT_MONTH`: From the start of the current month to the most recent time.</span>
+<span class="sd">                    - `PREVIOUS_MONTH`: The entire previous month.</span>
+<span class="sd">            time_window_time_zone (Optional[str]): The time zone for the time window, e.g. &#39;America/New_York&#39;. </span>
+<span class="sd">                If not provided, defaults to the instance&#39;s configured time zone.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            pd.DataFrame: A DataFrame containing the query results if the workflow succeeds.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            Exception: If the workflow execution fails or does not succeed within the maximum </span>
+<span class="sd">                number of retries.</span>
+<span class="sd">            requests.RequestException: If any API request fails during execution or result download.</span>
+<span class="sd">            ValueError: If the result download fails with a non-200 status code.</span>
+<span class="sd">            pd.errors.ParserError: If Pandas encounters an issue parsing the CSV data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">workflow_execution_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute_saved_workflow</span><span class="p">(</span><span class="n">workflow_id</span><span class="p">,</span>
+                                                            <span class="n">time_window_start</span><span class="p">,</span>
+                                                            <span class="n">time_window_end</span><span class="p">,</span>
+                                                            <span class="n">time_window_type</span><span class="p">,</span>
+                                                            <span class="n">time_window_time_zone</span><span class="p">)</span>
+
+        <span class="n">status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">worflow_execution_status</span><span class="p">(</span><span class="n">workflow_execution_id</span><span class="p">)</span>
+
+        <span class="n">attempt</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">max_attempts</span> <span class="o">=</span> <span class="mi">14</span>
+        <span class="n">sleep_time</span> <span class="o">=</span> <span class="mi">2</span>
+
+        <span class="k">while</span> <span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;SUCCEEDED&quot;</span><span class="p">,</span> <span class="s2">&quot;FAILED&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">attempt</span> <span class="o">&lt;</span> <span class="n">max_attempts</span><span class="p">:</span>
+
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep_time</span><span class="p">)</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">worflow_execution_status</span><span class="p">(</span><span class="n">workflow_execution_id</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Current status: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">, checking again in </span><span class="si">{</span><span class="n">sleep_time</span><span class="si">}</span><span class="s2"> seconds...&quot;</span><span class="p">)</span>
+
+            <span class="n">sleep_time</span> <span class="o">*=</span> <span class="mi">2</span>  <span class="c1"># Double the wait time for the next iteration up to a maximum</span>
+            <span class="n">attempt</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;SUCCEEDED&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Workflow completed successfully. Proceeding to download.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">download_query_results</span><span class="p">(</span><span class="n">workflow_execution_id</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Workflow did not succeed, current status: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+        </details>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="veetility.amazonads_api.AmazonAPI.clean_sql_query" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">clean_sql_query</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Cleans a SQL query by removing comments, newlines, and unnecessary whitespace.</p>
+<p>This method ensures that the SQL query is in a single-line format suitable for
+API requests. It removes single-line comments (starting with <code>--</code>), multi-line
+comments (enclosed in <code>/* */</code>), newlines, and tabs.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>sql_query</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The raw SQL query string to be cleaned.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+          </td>
+          <td><p>A cleaned SQL query formatted as a single line without comments or extra whitespace.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>query = '''
+... SELECT * FROM table -- This is a comment
+... WHERE column = 1 /<em> Multi-line
+... comment </em>/
+... '''
+clean_query = api.clean_sql_query(query)
+print(clean_query)
+SELECT * FROM table WHERE column = 1</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>veetility/amazonads_api.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">clean_sql_query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sql_query</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Cleans a SQL query by removing comments, newlines, and unnecessary whitespace.</span>
+
+<span class="sd">    This method ensures that the SQL query is in a single-line format suitable for</span>
+<span class="sd">    API requests. It removes single-line comments (starting with `--`), multi-line</span>
+<span class="sd">    comments (enclosed in `/* */`), newlines, and tabs.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        sql_query (str): The raw SQL query string to be cleaned.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: A cleaned SQL query formatted as a single line without comments or extra whitespace.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; query = &#39;&#39;&#39;</span>
+<span class="sd">        ... SELECT * FROM table -- This is a comment</span>
+<span class="sd">        ... WHERE column = 1 /* Multi-line</span>
+<span class="sd">        ... comment */</span>
+<span class="sd">        ... &#39;&#39;&#39;</span>
+<span class="sd">        &gt;&gt;&gt; clean_query = api.clean_sql_query(query)</span>
+<span class="sd">        &gt;&gt;&gt; print(clean_query)</span>
+<span class="sd">        SELECT * FROM table WHERE column = 1</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Use re.sub() to replace the single line comments with an empty string</span>
+    <span class="c1"># The flags=re.MULTILINE make the $ match end of lines in a multi-line string</span>
+    <span class="c1"># sql_query = re.sub(r&quot;--.*?$&quot;, &quot;&quot;, sql_query, flags=re.MULTILINE)</span>
+    <span class="n">sql_query</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;--[^\n]*&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">sql_query</span><span class="p">)</span>
+
+    <span class="c1"># Remove multi-line sql comments</span>
+    <span class="n">sql_query</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;/\*.*?\*/&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_query</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">sql_query</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="veetility.amazonads_api.AmazonAPI.create_workflow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_workflow</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">workflow_id</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Creates a new workflow in AMC with the specified SQL query and workflow ID.</p>
+<p>This method sends a POST request to the AMC API to create a workflow. The SQL
+query is cleaned to ensure it is properly formatted for the API, and the workflow
+is assigned a unique ID.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>sql_query</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The SQL query defining the workflow.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>workflow_id</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The unique identifier for the new workflow.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>None</code></td>          <td>
+          </td>
+          <td><p>The response from the API is printed to the console.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>requests.<span title="requests.RequestException">RequestException</span></code>
+          </td>
+          <td><p>If the API request fails.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code>KeyError</code>
+          </td>
+          <td><p>If the response does not contain expected fields.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>sql_query = "SELECT * FROM table WHERE column = 1"
+api.create_workflow(sql_query, "workflow_123")
+Status code = 201
+{"workflowId": "workflow_123", "status": "CREATED", ...}</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>veetility/amazonads_api.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">create_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                    <span class="n">sql_query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                    <span class="n">workflow_id</span><span class="p">:</span> <span class="nb">str</span>
+                    <span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a new workflow in AMC with the specified SQL query and workflow ID.</span>
+
+<span class="sd">    This method sends a POST request to the AMC API to create a workflow. The SQL</span>
+<span class="sd">    query is cleaned to ensure it is properly formatted for the API, and the workflow</span>
+<span class="sd">    is assigned a unique ID.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        sql_query (str): The SQL query defining the workflow.</span>
+<span class="sd">        workflow_id (str): The unique identifier for the new workflow.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None: The response from the API is printed to the console.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        requests.RequestException: If the API request fails.</span>
+<span class="sd">        KeyError: If the response does not contain expected fields.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; sql_query = &quot;SELECT * FROM table WHERE column = 1&quot;</span>
+<span class="sd">        &gt;&gt;&gt; api.create_workflow(sql_query, &quot;workflow_123&quot;)</span>
+<span class="sd">        Status code = 201</span>
+<span class="sd">        {&quot;workflowId&quot;: &quot;workflow_123&quot;, &quot;status&quot;: &quot;CREATED&quot;, ...}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">sql_query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clean_sql_query</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span>
+
+    <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="c1"># &quot;distinctUserCountColumn&quot;: &quot;du_count&quot;,</span>
+        <span class="s2">&quot;sqlQuery&quot;</span><span class="p">:</span> <span class="n">sql_query</span><span class="p">,</span>
+        <span class="s2">&quot;workflowId&quot;</span><span class="p">:</span> <span class="n">workflow_id</span>
+    <span class="p">}</span>
+
+    <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflows&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+        <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Status code = </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="veetility.amazonads_api.AmazonAPI.download_query_results" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">download_query_results</span><span class="p">(</span><span class="n">workflow_execution_id</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Downloads query results for a completed workflow execution and returns them as a Pandas DataFrame.</p>
+<p>Sends a GET request to retrieve the download URL for the workflow execution results, 
+then fetches and parses the results into a DataFrame.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>workflow_execution_id</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The unique identifier of the workflow execution.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>skiprows</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[int]</code>
+          </td>
+          <td><p>The number of rows to skip at the beginning of the CSV file. 
+Defaults to None.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>quoting</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td><p>Controls how quotes in the CSV data are handled. Uses <code>csv</code> module constants:
+- <code>csv.QUOTE_MINIMAL</code> (0): Quote fields containing special characters.
+- <code>csv.QUOTE_ALL</code> (1): Quote all fields.
+- <code>csv.QUOTE_NONNUMERIC</code> (2): Quote all non-numeric fields.
+- <code>csv.QUOTE_NONE</code> (3): Do not quote fields. Defaults to 0.</p></td>
+          <td>
+                <code>0</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>pd.DataFrame: A DataFrame containing the query results.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>requests.<span title="requests.RequestException">RequestException</span></code>
+          </td>
+          <td><p>If the API request fails or the download URL is unreachable.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code>ValueError</code>
+          </td>
+          <td><p>If the download fails with a non-200 status code.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code><span title="pandas">pd</span>.<span title="pandas.errors">errors</span>.<span title="pd.errors.ParserError">ParserError</span></code>
+          </td>
+          <td><p>If Pandas encounters an issue parsing the CSV data.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>veetility/amazonads_api.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span>
+<span class="normal">440</span>
+<span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span>
+<span class="normal">444</span>
+<span class="normal">445</span>
+<span class="normal">446</span>
+<span class="normal">447</span>
+<span class="normal">448</span>
+<span class="normal">449</span>
+<span class="normal">450</span>
+<span class="normal">451</span>
+<span class="normal">452</span>
+<span class="normal">453</span>
+<span class="normal">454</span>
+<span class="normal">455</span>
+<span class="normal">456</span>
+<span class="normal">457</span>
+<span class="normal">458</span>
+<span class="normal">459</span>
+<span class="normal">460</span>
+<span class="normal">461</span>
+<span class="normal">462</span>
+<span class="normal">463</span>
+<span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span>
+<span class="normal">467</span>
+<span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span>
+<span class="normal">475</span>
+<span class="normal">476</span>
+<span class="normal">477</span>
+<span class="normal">478</span>
+<span class="normal">479</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">download_query_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                           <span class="n">workflow_execution_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                           <span class="n">skiprows</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                           <span class="n">quoting</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+                           <span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Downloads query results for a completed workflow execution and returns them as a Pandas DataFrame.</span>
+
+<span class="sd">    Sends a GET request to retrieve the download URL for the workflow execution results, </span>
+<span class="sd">    then fetches and parses the results into a DataFrame.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        workflow_execution_id (str): The unique identifier of the workflow execution.</span>
+<span class="sd">        skiprows (Optional[int]): The number of rows to skip at the beginning of the CSV file. </span>
+<span class="sd">            Defaults to None.</span>
+<span class="sd">        quoting (int): Controls how quotes in the CSV data are handled. Uses `csv` module constants:</span>
+<span class="sd">            - `csv.QUOTE_MINIMAL` (0): Quote fields containing special characters.</span>
+<span class="sd">            - `csv.QUOTE_ALL` (1): Quote all fields.</span>
+<span class="sd">            - `csv.QUOTE_NONNUMERIC` (2): Quote all non-numeric fields.</span>
+<span class="sd">            - `csv.QUOTE_NONE` (3): Do not quote fields. Defaults to 0.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: A DataFrame containing the query results.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        requests.RequestException: If the API request fails or the download URL is unreachable.</span>
+<span class="sd">        ValueError: If the download fails with a non-200 status code.</span>
+<span class="sd">        pd.errors.ParserError: If Pandas encounters an issue parsing the CSV data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> \
+        <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflowExecutions/</span><span class="si">{</span><span class="n">workflow_execution_id</span><span class="si">}</span><span class="s1">/downloadUrls&#39;</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="n">download_url</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;downloadUrls&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">download_url</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">skiprows</span><span class="p">,</span> <span class="n">quoting</span><span class="o">=</span><span class="n">quoting</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Failed to download: Status code </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of rows in the dataframe is </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">df</span>
+
+    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Request failed: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="n">pd</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">ParserError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pandas failed to parse the CSV data: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">raise</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="veetility.amazonads_api.AmazonAPI.execute_and_download" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">execute_and_download</span><span class="p">(</span><span class="n">workflow_id</span><span class="p">,</span> <span class="n">time_window_start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_window_end</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_window_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_window_time_zone</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Executes a saved workflow, monitors its status, and downloads the results if successful.</p>
+<p>This method combines workflow execution, status monitoring, and result retrieval. 
+It retries the status check with an exponential backoff strategy until the workflow 
+either succeeds or fails, or the maximum number of attempts is reached.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>workflow_id</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The unique identifier of the workflow to execute.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>time_window_start</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>The start of the time window (ISO 8601 format), 
+required if <code>time_window_type</code> is <code>EXPLICIT</code>.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>time_window_end</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>The end of the time window (ISO 8601 format), 
+required if <code>time_window_type</code> is <code>EXPLICIT</code>.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>time_window_type</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>The type of time window to use. If not provided, 
+defaults to <code>MOST_RECENT_DAY</code>. Valid options are:
+    - <code>EXPLICIT</code>: The start and end of the time window must be explicitly provided.
+    - <code>MOST_RECENT_DAY</code>: The most recent 1-day window for which data is available.
+    - <code>MOST_RECENT_WEEK</code>: The most recent 1-week window for which data is available.
+    - <code>CURRENT_MONTH</code>: From the start of the current month to the most recent time.
+    - <code>PREVIOUS_MONTH</code>: The entire previous month.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>time_window_time_zone</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>The time zone for the time window, e.g. 'America/New_York'. 
+If not provided, defaults to the instance's configured time zone.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>pd.DataFrame: A DataFrame containing the query results if the workflow succeeds.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>Exception</code>
+          </td>
+          <td><p>If the workflow execution fails or does not succeed within the maximum 
+number of retries.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code>requests.<span title="requests.RequestException">RequestException</span></code>
+          </td>
+          <td><p>If any API request fails during execution or result download.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code>ValueError</code>
+          </td>
+          <td><p>If the result download fails with a non-200 status code.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code><span title="pandas">pd</span>.<span title="pandas.errors">errors</span>.<span title="pd.errors.ParserError">ParserError</span></code>
+          </td>
+          <td><p>If Pandas encounters an issue parsing the CSV data.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>veetility/amazonads_api.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">481</span>
+<span class="normal">482</span>
+<span class="normal">483</span>
+<span class="normal">484</span>
+<span class="normal">485</span>
+<span class="normal">486</span>
+<span class="normal">487</span>
+<span class="normal">488</span>
+<span class="normal">489</span>
+<span class="normal">490</span>
+<span class="normal">491</span>
+<span class="normal">492</span>
+<span class="normal">493</span>
+<span class="normal">494</span>
+<span class="normal">495</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span>
+<span class="normal">499</span>
+<span class="normal">500</span>
+<span class="normal">501</span>
+<span class="normal">502</span>
+<span class="normal">503</span>
+<span class="normal">504</span>
+<span class="normal">505</span>
+<span class="normal">506</span>
+<span class="normal">507</span>
+<span class="normal">508</span>
+<span class="normal">509</span>
+<span class="normal">510</span>
+<span class="normal">511</span>
+<span class="normal">512</span>
+<span class="normal">513</span>
+<span class="normal">514</span>
+<span class="normal">515</span>
+<span class="normal">516</span>
+<span class="normal">517</span>
+<span class="normal">518</span>
+<span class="normal">519</span>
+<span class="normal">520</span>
+<span class="normal">521</span>
+<span class="normal">522</span>
+<span class="normal">523</span>
+<span class="normal">524</span>
+<span class="normal">525</span>
+<span class="normal">526</span>
+<span class="normal">527</span>
+<span class="normal">528</span>
+<span class="normal">529</span>
+<span class="normal">530</span>
+<span class="normal">531</span>
+<span class="normal">532</span>
+<span class="normal">533</span>
+<span class="normal">534</span>
+<span class="normal">535</span>
+<span class="normal">536</span>
+<span class="normal">537</span>
+<span class="normal">538</span>
+<span class="normal">539</span>
+<span class="normal">540</span>
+<span class="normal">541</span>
+<span class="normal">542</span>
+<span class="normal">543</span>
+<span class="normal">544</span>
+<span class="normal">545</span>
+<span class="normal">546</span>
+<span class="normal">547</span>
+<span class="normal">548</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">execute_and_download</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                         <span class="n">workflow_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                         <span class="n">time_window_start</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                         <span class="n">time_window_end</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                         <span class="n">time_window_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                         <span class="n">time_window_time_zone</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+                         <span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Executes a saved workflow, monitors its status, and downloads the results if successful.</span>
+
+<span class="sd">    This method combines workflow execution, status monitoring, and result retrieval. </span>
+<span class="sd">    It retries the status check with an exponential backoff strategy until the workflow </span>
+<span class="sd">    either succeeds or fails, or the maximum number of attempts is reached.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        workflow_id (str): The unique identifier of the workflow to execute.</span>
+<span class="sd">        time_window_start (Optional[str]): The start of the time window (ISO 8601 format), </span>
+<span class="sd">            required if `time_window_type` is `EXPLICIT`.</span>
+<span class="sd">        time_window_end (Optional[str]): The end of the time window (ISO 8601 format), </span>
+<span class="sd">            required if `time_window_type` is `EXPLICIT`.</span>
+<span class="sd">        time_window_type (Optional[str]): The type of time window to use. If not provided, </span>
+<span class="sd">            defaults to `MOST_RECENT_DAY`. Valid options are:</span>
+<span class="sd">                - `EXPLICIT`: The start and end of the time window must be explicitly provided.</span>
+<span class="sd">                - `MOST_RECENT_DAY`: The most recent 1-day window for which data is available.</span>
+<span class="sd">                - `MOST_RECENT_WEEK`: The most recent 1-week window for which data is available.</span>
+<span class="sd">                - `CURRENT_MONTH`: From the start of the current month to the most recent time.</span>
+<span class="sd">                - `PREVIOUS_MONTH`: The entire previous month.</span>
+<span class="sd">        time_window_time_zone (Optional[str]): The time zone for the time window, e.g. &#39;America/New_York&#39;. </span>
+<span class="sd">            If not provided, defaults to the instance&#39;s configured time zone.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: A DataFrame containing the query results if the workflow succeeds.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        Exception: If the workflow execution fails or does not succeed within the maximum </span>
+<span class="sd">            number of retries.</span>
+<span class="sd">        requests.RequestException: If any API request fails during execution or result download.</span>
+<span class="sd">        ValueError: If the result download fails with a non-200 status code.</span>
+<span class="sd">        pd.errors.ParserError: If Pandas encounters an issue parsing the CSV data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">workflow_execution_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute_saved_workflow</span><span class="p">(</span><span class="n">workflow_id</span><span class="p">,</span>
+                                                        <span class="n">time_window_start</span><span class="p">,</span>
+                                                        <span class="n">time_window_end</span><span class="p">,</span>
+                                                        <span class="n">time_window_type</span><span class="p">,</span>
+                                                        <span class="n">time_window_time_zone</span><span class="p">)</span>
+
+    <span class="n">status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">worflow_execution_status</span><span class="p">(</span><span class="n">workflow_execution_id</span><span class="p">)</span>
+
+    <span class="n">attempt</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">max_attempts</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">sleep_time</span> <span class="o">=</span> <span class="mi">2</span>
+
+    <span class="k">while</span> <span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;SUCCEEDED&quot;</span><span class="p">,</span> <span class="s2">&quot;FAILED&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">attempt</span> <span class="o">&lt;</span> <span class="n">max_attempts</span><span class="p">:</span>
+
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleep_time</span><span class="p">)</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">worflow_execution_status</span><span class="p">(</span><span class="n">workflow_execution_id</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Current status: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">, checking again in </span><span class="si">{</span><span class="n">sleep_time</span><span class="si">}</span><span class="s2"> seconds...&quot;</span><span class="p">)</span>
+
+        <span class="n">sleep_time</span> <span class="o">*=</span> <span class="mi">2</span>  <span class="c1"># Double the wait time for the next iteration up to a maximum</span>
+        <span class="n">attempt</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;SUCCEEDED&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Workflow completed successfully. Proceeding to download.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">download_query_results</span><span class="p">(</span><span class="n">workflow_execution_id</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Workflow did not succeed, current status: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="veetility.amazonads_api.AmazonAPI.execute_saved_workflow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">execute_saved_workflow</span><span class="p">(</span><span class="n">workflow_id</span><span class="p">,</span> <span class="n">time_window_start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_window_end</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_window_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_window_time_zone</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Executes a saved workflow with the specified time window and returns the execution ID.</p>
+<p>Sends a POST request to the AMC API to execute the workflow identified by <code>workflow_id</code>. 
+The time window can be specified explicitly or by using predefined time window types.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>workflow_id</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The unique identifier of the workflow to execute.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>time_window_start</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>The start of the time window (ISO 8601 format), 
+required if <code>time_window_type</code> is <code>EXPLICIT</code>.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>time_window_end</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>The end of the time window (ISO 8601 format), 
+required if <code>time_window_type</code> is <code>EXPLICIT</code>.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>time_window_type</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>The type of time window to use. If not provided, 
+defaults to <code>MOST_RECENT_DAY</code>. Valid options are:
+    - <code>EXPLICIT</code>: The start and end of the time window must be explicitly 
+      provided in the request.
+    - <code>MOST_RECENT_DAY</code>: The most recent 1-day window for which data is available, 
+      aligned to day boundaries.
+    - <code>MOST_RECENT_WEEK</code>: The most recent 1-week window for which data is available, 
+      aligned to day boundaries.
+    - <code>CURRENT_MONTH</code>: From the start of the current month to the most recent time 
+      for which data is available.
+    - <code>PREVIOUS_MONTH</code>: The entire previous month.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>time_window_time_zone</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>The time zone for the time window, e.g. 'America/New_York'. 
+If not provided, defaults to the instance's configured time zone. </p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+          </td>
+          <td><p>The workflow execution ID.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>requests.<span title="requests.RequestException">RequestException</span></code>
+          </td>
+          <td><p>If the API request fails.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code>KeyError</code>
+          </td>
+          <td><p>If the response does not contain the expected fields.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>workflow_id = "workflow_123"
+execution_id = api.execute_saved_workflow(
+...     workflow_id, 
+...     time_window_type="MOST_RECENT_WEEK"
+... )
+print(execution_id)
+workflowExecution_456</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>veetility/amazonads_api.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">execute_saved_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                           <span class="n">workflow_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                           <span class="n">time_window_start</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                           <span class="n">time_window_end</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                           <span class="n">time_window_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                           <span class="n">time_window_time_zone</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+                           <span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Executes a saved workflow with the specified time window and returns the execution ID.</span>
+
+<span class="sd">    Sends a POST request to the AMC API to execute the workflow identified by `workflow_id`. </span>
+<span class="sd">    The time window can be specified explicitly or by using predefined time window types.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        workflow_id (str): The unique identifier of the workflow to execute.</span>
+<span class="sd">        time_window_start (Optional[str]): The start of the time window (ISO 8601 format), </span>
+<span class="sd">            required if `time_window_type` is `EXPLICIT`.</span>
+<span class="sd">        time_window_end (Optional[str]): The end of the time window (ISO 8601 format), </span>
+<span class="sd">            required if `time_window_type` is `EXPLICIT`.</span>
+<span class="sd">        time_window_type (Optional[str]): The type of time window to use. If not provided, </span>
+<span class="sd">            defaults to `MOST_RECENT_DAY`. Valid options are:</span>
+<span class="sd">                - `EXPLICIT`: The start and end of the time window must be explicitly </span>
+<span class="sd">                  provided in the request.</span>
+<span class="sd">                - `MOST_RECENT_DAY`: The most recent 1-day window for which data is available, </span>
+<span class="sd">                  aligned to day boundaries.</span>
+<span class="sd">                - `MOST_RECENT_WEEK`: The most recent 1-week window for which data is available, </span>
+<span class="sd">                  aligned to day boundaries.</span>
+<span class="sd">                - `CURRENT_MONTH`: From the start of the current month to the most recent time </span>
+<span class="sd">                  for which data is available.</span>
+<span class="sd">                - `PREVIOUS_MONTH`: The entire previous month.</span>
+<span class="sd">        time_window_time_zone (Optional[str]): The time zone for the time window, e.g. &#39;America/New_York&#39;. </span>
+<span class="sd">            If not provided, defaults to the instance&#39;s configured time zone. </span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The workflow execution ID.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        requests.RequestException: If the API request fails.</span>
+<span class="sd">        KeyError: If the response does not contain the expected fields.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; workflow_id = &quot;workflow_123&quot;</span>
+<span class="sd">        &gt;&gt;&gt; execution_id = api.execute_saved_workflow(</span>
+<span class="sd">        ...     workflow_id, </span>
+<span class="sd">        ...     time_window_type=&quot;MOST_RECENT_WEEK&quot;</span>
+<span class="sd">        ... )</span>
+<span class="sd">        &gt;&gt;&gt; print(execution_id)</span>
+<span class="sd">        workflowExecution_456&quot;&quot;&quot;</span>
+
+    <span class="n">body</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;workflowId&quot;</span><span class="p">:</span> <span class="n">workflow_id</span><span class="p">,</span>
+            <span class="s2">&quot;timeWindowStart&quot;</span><span class="p">:</span> <span class="n">time_window_start</span><span class="p">,</span>
+            <span class="s2">&quot;timeWindowEnd&quot;</span><span class="p">:</span> <span class="n">time_window_end</span><span class="p">,</span>
+            <span class="s2">&quot;timeWindowType&quot;</span><span class="p">:</span> <span class="n">time_window_type</span><span class="p">,</span>
+            <span class="s2">&quot;timeWindowTimeZone&quot;</span><span class="p">:</span> <span class="n">time_window_time_zone</span>
+    <span class="p">}</span>
+
+    <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> \
+        <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflowExecutions&#39;</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+        <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Status code = </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;workflowExecutionId&#39;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="veetility.amazonads_api.AmazonAPI.fetch_access_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fetch_access_token</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Fetches a new access token using the refresh token provided during initialization.</p>
+<p>This method sends a POST request to Amazon's OAuth2 token endpoint to exchange the 
+refresh token for an access token. The access token is then used to authenticate 
+subsequent API requests.</p>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>requests.<span title="requests.RequestException">RequestException</span></code>
+          </td>
+          <td><p>If the request to the token endpoint fails.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code>KeyError</code>
+          </td>
+          <td><p>If the response does not contain an access token.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>None</code></td>          <td>
+          </td>
+          <td><p>The method updates the instance's <code>access_token</code> attribute.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>veetility/amazonads_api.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fetch_access_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fetches a new access token using the refresh token provided during initialization.</span>
+
+<span class="sd">    This method sends a POST request to Amazon&#39;s OAuth2 token endpoint to exchange the </span>
+<span class="sd">    refresh token for an access token. The access token is then used to authenticate </span>
+<span class="sd">    subsequent API requests.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        requests.RequestException: If the request to the token endpoint fails.</span>
+<span class="sd">        KeyError: If the response does not contain an access token.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None: The method updates the instance&#39;s `access_token` attribute.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">token_url</span> <span class="o">=</span> <span class="s1">&#39;https://api.amazon.com/auth/o2/token&#39;</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;grant_type&quot;</span><span class="p">:</span> <span class="s2">&quot;refresh_token&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;refresh_token&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">refresh_token</span><span class="p">,</span>
+        <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_id</span><span class="p">,</span>
+        <span class="s2">&quot;client_secret&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_secret</span>
+    <span class="p">}</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">token_url</span><span class="p">,</span>
+                             <span class="n">data</span><span class="o">=</span><span class="n">body</span>
+                             <span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)[</span><span class="s1">&#39;access_token&#39;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="veetility.amazonads_api.AmazonAPI.inspect_workflow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">inspect_workflow</span><span class="p">(</span><span class="n">workflow_id</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Retrieves details of a specific workflow by its ID.</p>
+<p>Sends a GET request to the AMC API to fetch metadata and details about a
+particular workflow identified by <code>workflow_id</code>.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>workflow_id</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The unique identifier of the workflow to inspect.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>None</code></td>          <td>
+          </td>
+          <td><p>The response from the API is printed to the console.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>requests.<span title="requests.RequestException">RequestException</span></code>
+          </td>
+          <td><p>If the API request fails.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code>KeyError</code>
+          </td>
+          <td><p>If the response does not contain expected fields.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>veetility/amazonads_api.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">inspect_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">workflow_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Retrieves details of a specific workflow by its ID.</span>
+
+<span class="sd">    Sends a GET request to the AMC API to fetch metadata and details about a</span>
+<span class="sd">    particular workflow identified by `workflow_id`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        workflow_id (str): The unique identifier of the workflow to inspect.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None: The response from the API is printed to the console.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        requests.RequestException: If the API request fails.</span>
+<span class="sd">        KeyError: If the response does not contain expected fields.&quot;&quot;&quot;</span>
+
+    <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> \
+        <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflows/</span><span class="si">{</span><span class="n">workflow_id</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="veetility.amazonads_api.AmazonAPI.list_workflows" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">list_workflows</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Retrieves a list of workflows for the specified AMC instance.</p>
+<p>This method sends a GET request to the AMC API to fetch all workflows associated
+with the instance ID. It handles pagination using the <code>nextToken</code> provided by 
+the API and filters workflows that contain SQL queries.</p>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>List[Dict[str, str]]: A list of dictionaries containing <code>sqlQuery</code> and <code>workflowId</code> </p></td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td><p>for each workflow that includes a SQL query. Each SQL query is cleaned to remove </p></td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td><p>newlines.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>requests.<span title="requests.RequestException">RequestException</span></code>
+          </td>
+          <td><p>If the API request fails.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code>KeyError</code>
+          </td>
+          <td><p>If the response does not contain expected fields like <code>workflows</code> or <code>nextToken</code>.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>workflows = api.list_workflows()
+print(workflows)
+[{'sqlQuery': 'SELECT * FROM ...', 'workflowId': 'workflow_123'}, ...]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>veetility/amazonads_api.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">list_workflows</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Retrieves a list of workflows for the specified AMC instance.</span>
+
+<span class="sd">    This method sends a GET request to the AMC API to fetch all workflows associated</span>
+<span class="sd">    with the instance ID. It handles pagination using the `nextToken` provided by </span>
+<span class="sd">    the API and filters workflows that contain SQL queries.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[Dict[str, str]]: A list of dictionaries containing `sqlQuery` and `workflowId` </span>
+<span class="sd">        for each workflow that includes a SQL query. Each SQL query is cleaned to remove </span>
+<span class="sd">        newlines.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        requests.RequestException: If the API request fails.</span>
+<span class="sd">        KeyError: If the response does not contain expected fields like `workflows` or `nextToken`.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; workflows = api.list_workflows()</span>
+<span class="sd">        &gt;&gt;&gt; print(workflows)</span>
+<span class="sd">        [{&#39;sqlQuery&#39;: &#39;SELECT * FROM ...&#39;, &#39;workflowId&#39;: &#39;workflow_123&#39;}, ...]&quot;&quot;&quot;</span>
+
+    <span class="n">next_token</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">workflows</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> \
+            <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflows&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">next_token</span><span class="p">:</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;nextToken&#39;</span><span class="p">:</span> <span class="n">next_token</span><span class="p">}</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Status code = </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="n">workflows</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;workflows&#39;</span><span class="p">])</span>
+
+        <span class="n">next_token</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;nextToken&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">next_token</span><span class="p">:</span>
+            <span class="k">break</span>
+
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">workflows</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">workflows</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;sqlQuery&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">]</span>
+
+    <span class="n">workflows</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;sqlQuery&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;sqlQuery&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+        <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),</span> <span class="s1">&#39;workflowId&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;workflowId&#39;</span><span class="p">]}</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">workflows</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">workflows</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="veetility.amazonads_api.AmazonAPI.update_workflow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_workflow</span><span class="p">(</span><span class="n">workflow_id</span><span class="p">,</span> <span class="n">sql_query</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Updates an existing workflow in AMC with a new SQL query.</p>
+<p>This method sends a PUT request to the AMC API to update the SQL query of an
+existing workflow identified by <code>workflow_id</code>. The SQL query is cleaned to ensure
+it is properly formatted for the API.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>workflow_id</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The unique identifier of the workflow to update.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>sql_query</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The new SQL query to assign to the workflow.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>None</code></td>          <td>
+          </td>
+          <td><p>The response from the API is printed to the console.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>requests.<span title="requests.RequestException">RequestException</span></code>
+          </td>
+          <td><p>If the API request fails.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code>KeyError</code>
+          </td>
+          <td><p>If the response does not contain expected fields.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>sql_query = "SELECT * FROM table WHERE column = 2"
+api.update_workflow("workflow_123", sql_query)
+Status code = 200
+{"workflowId": "workflow_123", "status": "UPDATED", ...}</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>veetility/amazonads_api.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">update_workflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                    <span class="n">workflow_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                    <span class="n">sql_query</span><span class="p">:</span> <span class="nb">str</span>
+                    <span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Updates an existing workflow in AMC with a new SQL query.</span>
+
+<span class="sd">    This method sends a PUT request to the AMC API to update the SQL query of an</span>
+<span class="sd">    existing workflow identified by `workflow_id`. The SQL query is cleaned to ensure</span>
+<span class="sd">    it is properly formatted for the API.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        workflow_id (str): The unique identifier of the workflow to update.</span>
+<span class="sd">        sql_query (str): The new SQL query to assign to the workflow.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None: The response from the API is printed to the console.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        requests.RequestException: If the API request fails.</span>
+<span class="sd">        KeyError: If the response does not contain expected fields.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; sql_query = &quot;SELECT * FROM table WHERE column = 2&quot;</span>
+<span class="sd">        &gt;&gt;&gt; api.update_workflow(&quot;workflow_123&quot;, sql_query)</span>
+<span class="sd">        Status code = 200</span>
+<span class="sd">        {&quot;workflowId&quot;: &quot;workflow_123&quot;, &quot;status&quot;: &quot;UPDATED&quot;, ...}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">sql_query</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clean_sql_query</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span>
+
+    <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="c1"># &quot;distinctUserCountColumn&quot;: &quot;du_count&quot;,</span>
+        <span class="s2">&quot;sqlQuery&quot;</span><span class="p">:</span> <span class="n">sql_query</span><span class="p">,</span>
+        <span class="s2">&quot;workflowId&quot;</span><span class="p">:</span> <span class="n">workflow_id</span>
+    <span class="p">}</span>
+
+    <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflows/</span><span class="si">{</span><span class="n">workflow_id</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
+        <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Status code = </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="veetility.amazonads_api.AmazonAPI.worflow_execution_status" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">worflow_execution_status</span><span class="p">(</span><span class="n">workflow_execution_id</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Retrieves the current status of a workflow execution.</p>
+<p>Sends a GET request to the AMC API to fetch the status of a workflow execution
+identified by <code>workflow_execution_id</code>.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>workflow_execution_id</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The unique identifier of the workflow execution.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+          </td>
+          <td><p>The status of the workflow execution. </p></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>requests.<span title="requests.RequestException">RequestException</span></code>
+          </td>
+          <td><p>If the API request fails.</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code>KeyError</code>
+          </td>
+          <td><p>If the response does not contain the expected <code>status</code> field.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+<details class="example">
+  <summary>Example</summary>
+  <blockquote>
+<blockquote>
+<blockquote>
+<p>execution_id = "workflowExecution_456"
+status = api.worflow_execution_status(execution_id)
+print(status)
+"RUNNING"</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>veetility/amazonads_api.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">worflow_execution_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                             <span class="n">workflow_execution_id</span><span class="p">:</span> <span class="nb">str</span>
+                             <span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Retrieves the current status of a workflow execution.</span>
+
+<span class="sd">    Sends a GET request to the AMC API to fetch the status of a workflow execution</span>
+<span class="sd">    identified by `workflow_execution_id`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        workflow_execution_id (str): The unique identifier of the workflow execution.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The status of the workflow execution. </span>
+
+
+<span class="sd">    Raises:</span>
+<span class="sd">        requests.RequestException: If the API request fails.</span>
+<span class="sd">        KeyError: If the response does not contain the expected `status` field.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; execution_id = &quot;workflowExecution_456&quot;</span>
+<span class="sd">        &gt;&gt;&gt; status = api.worflow_execution_status(execution_id)</span>
+<span class="sd">        &gt;&gt;&gt; print(status)</span>
+<span class="sd">        &quot;RUNNING&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+    <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">+</span> \
+        <span class="sa">f</span><span class="s1">&#39;/amc/reporting/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instance_id</span><span class="si">}</span><span class="s1">/workflowExecutions/</span><span class="si">{</span><span class="n">workflow_execution_id</span><span class="si">}</span><span class="s1">&#39;</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">standard_header</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>

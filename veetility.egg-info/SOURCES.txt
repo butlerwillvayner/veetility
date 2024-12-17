@@ -5,6 +5,7 @@ tests/test_identify_match_multi_cols.py
 tests/test_prepare_string_matching.py
 tests/test_write_json.py
 veetility/__init__.py
+veetility/amazonads_api.py
 veetility/cleaning_functions.py
 veetility/email_functions.py
 veetility/generic_functions.py

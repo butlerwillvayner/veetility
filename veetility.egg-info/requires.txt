@@ -6,5 +6,5 @@ pandas
 psycopg2-binary
 regex
 requests
-SQLAlchemy
+SQLAlchemy>=1.1.18
 tqdm
